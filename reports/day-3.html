@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>AI 行业日报 · 2026-06-17</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", sans-serif;
+  font-size: 15px; line-height: 1.7; color: #0f172a;
+  background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 50%, #f0f9ff 100%);
+  background-attachment: fixed;
+  min-height: 100vh; padding: 16px 12px 80px;
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+.hero {
+  background: linear-gradient(135deg, rgba(14,165,233,0.18), rgba(59,130,246,0.12));
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 22px; padding: 22px 18px; margin-bottom: 18px;
+  box-shadow: 0 8px 28px -8px rgba(14,165,233,0.25);
+}
+.hero h1 { font-size: 22px; font-weight: 700; color: #0c4a6e; margin-bottom: 6px; letter-spacing: -0.3px; }
+.hero .date { font-size: 13px; color: #0369a1; opacity: 0.85; margin-bottom: 12px; }
+.hero .summary { font-size: 14px; color: #075985; line-height: 1.75; }
+.hero .summary strong { color: #0c4a6e; font-weight: 600; }
+section { margin-bottom: 20px; }
+section > h2 {
+  font-size: 16px; font-weight: 600; color: #0c4a6e;
+  padding: 8px 14px; margin-bottom: 12px;
+  background: rgba(255,255,255,0.6); backdrop-filter: blur(8px);
+  border-left: 4px solid #0ea5e9; border-radius: 0 10px 10px 0;
+  display: flex; align-items: center; gap: 8px;
+}
+section > h2 .count { font-size: 12px; font-weight: 400; color: #64748b; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(186,230,253,0.7);
+  border-radius: 16px; padding: 14px 14px;
+  box-shadow: 0 4px 14px -6px rgba(2,132,199,0.12);
+  transition: transform 0.15s ease;
+}
+.card:active { transform: scale(0.985); }
+.card h3 {
+  font-size: 15px; font-weight: 600; line-height: 1.5;
+  margin-bottom: 8px; color: #0f172a;
+}
+.card h3 a { color: inherit; text-decoration: none; }
+.card h3 a:hover { color: #0284c7; }
+.card p { font-size: 13.5px; color: #334155; line-height: 1.65; }
+.card .source { font-size: 12px; color: #64748b; margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(148,163,184,0.3); }
+.card .source a { color: #0284c7; text-decoration: none; }
+.region {
+  display: inline-block; font-size: 11px; font-weight: 500;
+  padding: 2px 8px; border-radius: 999px; margin-right: 6px;
+  vertical-align: middle; line-height: 1.5;
+}
+.r-us { background: #dbeafe; color: #1e40af; }
+.r-cn { background: #fee2e2; color: #b91c1c; }
+.r-eu { background: #ede9fe; color: #6d28d9; }
+.r-asia { background: #ffedd5; color: #c2410c; }
+.r-global { background: #cffafe; color: #0e7490; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 14px; background: rgba(255,255,255,0.7); padding: 4px; }
+table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 13.5px; }
+table th, table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(186,230,253,0.6); white-space: nowrap; }
+table th { background: rgba(186,230,253,0.4); font-weight: 600; color: #0c4a6e; font-size: 13px; }
+.up { color: #16a34a; font-weight: 600; }
+.down { color: #dc2626; font-weight: 600; }
+.flat { color: #64748b; }
+.footer {
+  text-align: center; font-size: 12px; color: #64748b;
+  padding: 18px 12px; margin-top: 24px;
+  background: rgba(255,255,255,0.5); border-radius: 14px;
+}
+.footer .disclaimer { color: #94a3b8; margin-top: 6px; }
+@media (min-width: 640px) { body { font-size: 16px; padding: 24px 20px; } .grid { grid-template-columns: 1fr 1fr; } .hero h1 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>🌊 AI 行业日报</h1>
+    <div class="date">2026 年 6 月 17 日（周三） · 覆盖 6 月 16 日全球行情与新闻</div>
+    <div class="summary">
+      昨日五大要点：<br>
+      ① <strong>史上最大 AI 并购：</strong>SpaceX 以 $600 亿收购 AI 编程公司 Cursor，马斯克 IPO 后 M&A 火力全开；<br>
+      ② <strong>AI 三巨头冲刺 IPO：</strong>OpenAI 秘密递交招股书（Reuters 6/8），Anthropic 已正式提交（NYT 6/1），SpaceX 已上市——总估值超 $3 万亿；<br>
+      ③ <strong>Google × SpaceX $300 亿 AI 超算协议：</strong>锁定太空+地面算力，AI 基建进入"轨道级"；<br>
+      ④ <strong>NVIDIA 太空计算：</strong>Space-1 Vera Rubin Module 发布，数据中心级 AI 算力首次进入近地轨道；<br>
+      ⑤ <strong>A 股结构分化：</strong>三大指数下跌，芯片半导体逆势拉升，AI 应用方向集体走强，入口争夺白热化。
+    </div>
+  </header>
+
+  <section>
+    <h2>🚀 模型与产品发布 <span class="count">2 条</span></h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3><a href="http://nvidianews.nvidia.com/news/space-computing" target="_blank"><span class="region r-us">美国</span>NVIDIA 发布 Space-1 Vera Rubin 太空计算模块</a></h3>
+        <p>NVIDIA 正式推出 Space-1 Vera Rubin Module，将数据中心级 AI 计算能力送入近地轨道。该平台基于 Vera Rubin 架构，专为太空环境优化，支持卫星端实时推理与自主决策，标志着 AI 算力正式"走出地球"。</p>
+        <p class="source">来源：<a href="http://nvidianews.nvidia.com/news/space-computing">NVIDIA Newsroom</a></p>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://www.tomshardware.com/pc-components/cpus/demand-for-data-center-cpus-has-surged-and-ai-agents-are-responsible-why-the-cpu-to-gpu-ratio-is-more-important-than-ever-for-hyperscalers" target="_blank"><span class="region r-global">全球</span>AI Agent 推动数据中心 CPU 需求激增：CPU:GPU 比率成关键</a></h3>
+        <p>Tom's Hardware 报道，随着 AI Agent 大规模部署，数据中心 CPU 需求显著飙升。超大规模客户的 CPU 与 GPU 配比已成为衡量 AI 基建效率的核心指标，推理侧对 CPU 编排能力的需求远超预期。</p>
+        <p class="source">来源：<a href="https://www.tomshardware.com/pc-components/cpus/demand-for-data-center-cpus-has-surged-and-ai-agents-are-responsible-why-the-cpu-to-gpu-ratio-is-more-important-than-ever-for-hyperscalers">Tom's Hardware</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>🔧 硬件与基础设施 <span class="count">3 条</span></h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3><a href="https://m.chaum.net/first-dry/Google-Signs-30-Billion-Deal-with-SpaceX-for-AI-Supercomputing-Power-Ahead-of-SpaceX-IPO-29-17685" target="_blank"><span class="region r-us">美国</span>Google 与 SpaceX 签署 $300 亿 AI 超算合作协议</a></h3>
+        <p>报道称 Google 与 SpaceX 达成一项价值 $300 亿的 AI 超级计算合作协议，涵盖轨道数据中心与地面算力资源。这是继微软–OpenAI、谷歌–Anthropic 之后又一笔超长期 AI 基建锁定。</p>
+        <p class="source">来源：Chaum / SpaceX IPO 前公告</p>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://www.manufacturingdive.com/news/opinion-omdia-ai-semiconductor-chip-scarcity/817172/" target="_blank"><span class="region r-global">全球</span>2026 AI 芯片产能延迟持续：半导体短缺仍为最大瓶颈</a></h3>
+        <p>Manufacturing Dive / Omdia 分析指出，尽管各方大规模投资，2026 年 AI 芯片产能交付仍面临严重延迟。先进制程产能受限叠加需求爆发式增长，半导体短缺将贯穿全年。</p>
+        <p class="source">来源：<a href="https://www.manufacturingdive.com/news/opinion-omdia-ai-semiconductor-chip-scarcity/817172/">Manufacturing Dive / Omdia</a></p>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/03/amd-s-next-generation-ai-chips-set-to-power-2026-data-center-growth" target="_blank"><span class="region r-us">美国</span>S&P Global：AMD 下一代 AI 芯片驱动 2026 数据中心增长</a></h3>
+        <p>S&P Global Market Intelligence 研报指出，AMD 下一代 AI 芯片将成为 2026 年数据中心增长核心驱动力。数据中心 GPU 营收预计同比增长 114%，AMD 正加速缩小与 NVIDIA 的份额差距。</p>
+        <p class="source">来源：<a href="https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/03/amd-s-next-generation-ai-chips-set-to-power-2026-data-center-growth">S&P Global Market Intelligence</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>💰 融资 · IPO · 并购 <span class="count">4 条</span></h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3><a href="https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html" target="_blank"><span class="region r-us">美国</span>SpaceX 以 $600 亿收购 Cursor：史上最大 AI 并购</a></h3>
+        <p>6/16 SpaceX 正式宣布以 $600 亿收购 AI 编程公司 Cursor。交易预计 Q3 完成。Fortune 指出 SpaceX IPO 后股价飙升，几天内即"赚回"整笔交易对价。这是 AI 编程赛道迄今最大收购。</p>
+        <p class="source">来源：<a href="https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html">CNBC</a> / <a href="https://www.forbes.com/sites/siladityaray/2026/06/16/spacex-will-buy-ai-coding-firm-cursor-for-60-billion/">Forbes</a> / <a href="https://fortune.com/2026/06/16/elon-musk-spacex-ipo-ai-coding-startup-cursor-acquisition/">Fortune</a></p>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://www.reuters.com/technology/openai-files-us-ipo-after-anthropic-ai-giants-head-public-markets-2026-06-08/" target="_blank"><span class="region r-us">美国</span>OpenAI 秘密提交美国 IPO 申请</a></h3>
+        <p>Reuters 6/8 报道：OpenAI 已秘密提交美国 IPO 文件，紧随 Anthropic 之后冲击公开市场。公司今年 3 月完成 $1220 亿融资后估值约 $8520 亿，IPO 或于 Q3-Q4 完成。</p>
+        <p class="source">来源：<a href="https://www.reuters.com/technology/openai-files-us-ipo-after-anthropic-ai-giants-head-public-markets-2026-06-08/">Reuters 6/8</a></p>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://www.nytimes.com/2026/06/01/technology/anthropic-ipo.html" target="_blank"><span class="region r-us">美国</span>Anthropic 正式递交 IPO 招股书</a></h3>
+        <p>NYT 6/1 报道：Anthropic 正式向 SEC 提交 IPO 招股书。在今年 2 月 $650 亿 H 轮融资后估值约 $9650 亿，市场预期上市后冲击万亿美元。Claude 系列模型用户量与营收的高速增长构成核心叙事。</p>
+        <p class="source">来源：<a href="https://www.nytimes.com/2026/06/01/technology/anthropic-ipo.html">NYT 6/1</a> / <a href="https://www.zacks.com/featured-articles/761/anthropic-ipo">Zacks</a></p>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://www.tmtpost.com/agent/ai-article?id=16842" target="_blank"><span class="region r-global">全球</span>三巨头集体 IPO：SpaceX/OpenAI/Anthropic 总估值超 $3 万亿</a></h3>
+        <p>钛媒体 / MacroMicro 综述：SpaceX（已上市）、OpenAI、Anthropic 三家拟于 2026 年 6-10 月集体上市，合计估值超 $3 万亿。这是美国资本市场自 2000 年以来最密集的超级 IPO 潮。</p>
+        <p class="source">来源：<a href="https://www.tmtpost.com/agent/ai-article?id=16842">钛媒体</a> / <a href="https://www.macromicro.me/blog/market-update-three-mega-ipo-fundraising-waves-are-coming-the-ai-capital-war-has-officially-begun">MacroMicro</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>📈 AI 股票 / ETF 行情（2026-06-16）</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>板块 / 标的</th><th>市场</th><th>6/16 表现</th><th>关键驱动</th></tr></thead>
+        <tbody>
+          <tr><td>三大指数</td><td>A 股</td><td class="down">集体下跌</td><td>外围扰动 / 获利回吐</td></tr>
+          <tr><td>芯片半导体板块</td><td>A 股</td><td class="up">逆势拉升</td><td>华虹、京东方涨停</td></tr>
+          <tr><td>AI 应用方向</td><td>A 股</td><td class="up">集体走强</td><td>开普云 20% 涨停</td></tr>
+          <tr><td>恒生指数</td><td>港股</td><td class="down">跌超 1%</td><td>科网股继续承压</td></tr>
+          <tr><td>华虹半导体</td><td>港股</td><td class="up">涨近 4%</td><td>芯片板块逆势走强</td></tr>
+          <tr><td>SpaceX (SPCX)</td><td>美股</td><td class="up">大幅上涨</td><td>$600 亿 Cursor 收购利好</td></tr>
+          <tr><td>费城半导体指数</td><td>美股</td><td class="flat">震荡修复</td><td>6/5 暴跌 10% 后回稳</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid" style="margin-top:12px;">
+      <div class="card">
+        <h3><a href="https://wallstreetcn.com/articles/3773833" target="_blank"><span class="region r-cn">中国</span>A 股芯片半导体逆势拉升，京东方涨停</a></h3>
+        <p>华尔街见闻：A 股三大指数集体走低，但芯片半导体板块逆势大涨。华虹半导体港股涨近 4%，京东方 A 股涨停，AI 应用方向开普云 20% 涨停，瑞芯微、启明信息等多股涨停。</p>
+        <p class="source">来源：<a href="https://wallstreetcn.com/articles/3773833">华尔街见闻</a> / <a href="https://www.chnfund.com/article/ARf8cf878d-3a93-e3e5-7afd-3a1bfbb633c6">中国基金报</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔍 分析师 / 投行研判 <span class="count">2 条</span></h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3><a href="https://fortune.com/2026/06/16/elon-musk-spacex-ipo-ai-coding-startup-cursor-acquisition/" target="_blank"><span class="region r-us">美国</span>Fortune：SpaceX IPO 后 M&A 火力全开的底层逻辑</a></h3>
+        <p>Fortune 6/16 深度分析：SpaceX 上市后股价飙升，几天内市值增量即覆盖 $600 亿 Cursor 交易对价。这揭示了马斯克"IPO→市值膨胀→收购 AI 核心资产"的全新 M&A 路径。</p>
+        <p class="source">来源：<a href="https://fortune.com/2026/06/16/elon-musk-spacex-ipo-ai-coding-startup-cursor-acquisition/">Fortune 6/16</a></p>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://www.stcn.com/article/detail/3947364.html" target="_blank"><span class="region r-us">美国</span>费城半导体 6/5 暴跌 10% 后市场修复路径</a></h3>
+        <p>证券时报回顾：美东时间 6/5 费城半导体指数暴跌逾 10%，成份股单日市值合计蒸发数千亿美元。此后市场进入修复阶段，机构观点分化——有声音称"AI 大牛市遭遇结构性重击"。</p>
+        <p class="source">来源：<a href="https://www.stcn.com/article/detail/3947364.html">证券时报</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>🛡️ 政策 · 安全 · 监管 <span class="count">2 条</span></h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3><a href="https://international.caixin.com/2026-06-04/102450872.html" target="_blank"><span class="region r-us">美国</span>特朗普签署《促进高级人工智能创新与安全》行政令</a></h3>
+        <p>财新网：6/2 特朗普正式签署行政令，要求联邦机构在促进 AI 创新的同时建立安全评估框架。重点涵盖前沿模型能力评估、关键基础设施 AI 应用审查、以及对抗性 AI 威胁防范。</p>
+        <p class="source">来源：<a href="https://international.caixin.com/2026-06-04/102450872.html">财新网 6/4</a></p>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://www.instagram.com/p/DZR9DdKE1da/" target="_blank"><span class="region r-global">全球</span>OpenAI/Anthropic/DeepMind CEO 联合呼吁强制 DNA 合成筛查</a></h3>
+        <p>OpenAI、Anthropic、Google DeepMind 三家 CEO 罕见联合发声，呼吁各国政府对 DNA 合成实施强制筛查（mandatory screening），以防 AI 被用于设计生物武器。这是三大实验室首次在安全政策上统一立场。</p>
+        <p class="source">来源：Instagram / AI Insiders 6/16</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>📰 大厂动态 <span class="count">2 条</span></h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3><a href="https://www.stcn.com/article/detail/3634239.html" target="_blank"><span class="region r-cn">中国</span>AI 超级入口争夺战升温：腾讯阿里字节影子股全线活跃</a></h3>
+        <p>证券时报：AI 技术推动"超级入口"从概念走向现实。腾讯、阿里、字节跳动围绕 AI 入口展开激烈竞争，相关影子股（概念受益标的）在 A 股/港股全线活跃。</p>
+        <p class="source">来源：<a href="https://www.stcn.com/article/detail/3634239.html">证券时报</a></p>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://m.36kr.com/p/3697425974013571" target="_blank"><span class="region r-cn">中国</span>36氪：AI 入口分化——字节阿里主攻 vs 百度腾讯转守</a></h3>
+        <p>36 氪深度分析：四大巨头 AI 入口战略已明显分化。字节主打"娱乐+互动"、阿里聚焦"AI+消费"形成进攻态势；百度、腾讯则从"全面进攻"转向"生态防御"，格局正在固化。</p>
+        <p class="source">来源：<a href="https://m.36kr.com/p/3697425974013571">36氪</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="footer">
+    生成时间：2026-06-17 09:30 CST · QoderWork AI Daily Report v2.1（覆盖 6/16 全球行情与新闻）
+    <div class="disclaimer">本报告由公开信息整理而成，仅供研究参考，不构成任何投资建议。</div>
+  </div>
+
+</div>
+</body>
+</html>
