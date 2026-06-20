@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#0ea5e9">
+<title>AI 行业日报 · 2026-06-20</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 35%, #ffffff 70%, #dbeafe 100%);
+  background-attachment: fixed;
+  color: #0f172a;
+  line-height: 1.65;
+  font-size: 15px;
+  min-height: 100vh;
+  padding: 16px 12px 64px;
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+
+/* Hero */
+.hero {
+  position: relative;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(186, 230, 253, 0.6);
+  border-radius: 22px;
+  padding: 22px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 32px rgba(14, 165, 233, 0.08);
+}
+.hero .badge {
+  display: inline-block; font-size: 12px; font-weight: 600;
+  color: #0369a1; background: rgba(14, 165, 233, 0.12);
+  padding: 4px 10px; border-radius: 999px; margin-bottom: 10px;
+}
+.hero h1 {
+  font-size: 22px; font-weight: 700; color: #0c4a6e;
+  letter-spacing: -0.5px; margin-bottom: 6px;
+}
+.hero .date { font-size: 13px; color: #475569; margin-bottom: 14px; }
+.hero .summary { font-size: 14px; color: #1e293b; line-height: 1.7; }
+.hero .summary strong { color: #0c4a6e; }
+.hero ul { list-style: none; }
+.hero li { margin-bottom: 6px; padding-left: 18px; position: relative; }
+.hero li::before { content: "▸"; position: absolute; left: 0; color: #0284c7; }
+
+/* Section */
+section { margin-bottom: 22px; }
+.sec-title {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 16px; font-weight: 700; color: #0c4a6e;
+  padding: 10px 14px; margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(186, 230, 253, 0.5);
+  border-radius: 14px;
+}
+.sec-title .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+}
+
+/* Grid */
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(186, 230, 253, 0.55);
+  border-radius: 16px;
+  padding: 14px 16px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.05);
+}
+.card:active { transform: scale(0.99); }
+.card .meta {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;
+  font-size: 11px;
+}
+.tag {
+  display: inline-block; padding: 2px 8px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.2px;
+}
+.tag-us { background: rgba(59, 130, 246, 0.12); color: #1d4ed8; }
+.tag-cn { background: rgba(239, 68, 68, 0.12); color: #b91c1c; }
+.tag-eu { background: rgba(168, 85, 247, 0.12); color: #7e22ce; }
+.tag-asia { background: rgba(249, 115, 22, 0.12); color: #c2410c; }
+.tag-global { background: rgba(20, 184, 166, 0.14); color: #0f766e; }
+.tag-cat { background: rgba(14, 165, 233, 0.1); color: #0369a1; }
+
+.card h3 { font-size: 15px; font-weight: 600; line-height: 1.5; margin-bottom: 6px; }
+.card h3 a {
+  color: #0f172a; text-decoration: none;
+  border-bottom: 1px solid transparent; transition: border 0.2s;
+}
+.card h3 a:hover, .card h3 a:active { border-bottom-color: #0ea5e9; color: #0369a1; }
+.card p {
+  font-size: 13.5px; color: #334155; line-height: 1.65;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card .source { font-size: 11.5px; color: #64748b; margin-top: 8px; }
+
+/* Table (stocks) */
+.table-wrap {
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(186, 230, 253, 0.55);
+  border-radius: 16px;
+  padding: 8px;
+}
+table {
+  width: 100%; min-width: 480px; border-collapse: collapse; font-size: 13px;
+}
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(186, 230, 253, 0.4); }
+th { font-weight: 600; color: #0369a1; background: rgba(224, 242, 254, 0.5); font-size: 12.5px; }
+td { color: #1e293b; }
+.up { color: #dc2626; font-weight: 600; }
+.down { color: #16a34a; font-weight: 600; }
+
+/* Footer */
+footer {
+  margin-top: 32px; padding: 18px 16px; text-align: center;
+  font-size: 12px; color: #64748b;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  border: 1px solid rgba(186, 230, 253, 0.4);
+}
+footer .disc { color: #94a3b8; margin-top: 6px; }
+
+@media (min-width: 640px) {
+  body { padding: 24px 20px 80px; font-size: 15.5px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .hero h1 { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hero">
+  <span class="badge">每日简报 · v2026.06.20</span>
+  <h1>AI 行业日报</h1>
+  <div class="date">2026年6月20日 周六 · 覆盖过去24小时</div>
+  <ul class="summary">
+    <li><strong>2026年6月成为史上最大AI模型发布月</strong>：Google Gemini 3.5 Pro、Anthropic Claude Fable 5 / Mythos 5、xAI Grok 5 等前沿模型在30天内密集发布，模型能力趋同成为新常态。</li>
+    <li><strong>中国八部门联合印发"人工智能+消费"指导意见</strong>：提出17项举措，推动智能终端、人形机器人等进入消费场景，打通"有产品无市场"结构性堵点。</li>
+    <li><strong>国产算力底座再传进展</strong>：TensorDyne 发布 AI 推理芯片 Napier，国家发改委披露中国智能算力已达188.2万P。</li>
+    <li><strong>具身智能密集落地</strong>：银河通用发布人形机器人通用小脑模型 AstraBrain-WBC 0.5，基于宇树 G1 改装的机器人成功攀登6200米火山。</li>
+    <li><strong>自动驾驶资本化提速</strong>：Momenta 获境外发行上市备案，Pre-IPO 融资10亿美元，腾讯、顺为资本为股东。</li>
+  </ul>
+</div>
+
+<!-- 模型/产品 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>模型 · 产品发布</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">模型发布潮</span></div>
+      <h3><a href="https://valueaddvc.com/pulse/june-2026-biggest-ai-model-launch-month-ever" target="_blank">2026年6月成为史上最大AI模型发布月，前沿模型能力趋同成为新常态</a></h3>
+      <p>Google Gemini 3.5 Pro、Anthropic Claude Fable 5 / Mythos 5、xAI Grok 5 等在30天内密集发布。文章指出模型领先优势的有效期从"季度"压缩到"周"，切换成本趋近于零，集成层、专有数据与工作流成为唯一可防御资产。</p>
+      <div class="source">来源：Value Add VC</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">编程智能体</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c00190722u4.html?from=tech" target="_blank">OpenAI Codex 兼容任意开源模型，实测 DeepSeek 接入仍存门槛</a></h3>
+      <p>OpenAI Codex 的 App、CLI 和 SDK 已支持接入任意开源模型，不再仅限自家模型；新浪实测 DeepSeek 后发现上手门槛仍然偏高，开发者生态开放与使用体验之间仍有落差。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">多模态</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c0019072fh0.html?from=tech" target="_blank">DeepSeek 识图模式正式上线，支持图片识别与分析</a></h3>
+      <p>DeepSeek 推出"识图模式"，支持图片识别与分析功能，暂不支持生图或视频。研究员陈小康在 X 平台确认该功能已上线，标志着 DeepSeek 向多模态能力迈出关键一步。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-asia">亚洲</span><span class="tag tag-cat">小模型</span></div>
+      <h3><a href="https://arxiv.org/abs/2606.18208" target="_blank">FaceMind Research Asia 约10亿参数小模型在世界建模任务上超越百倍规模商业API</a></h3>
+      <p>FaceMind Research Asia 在 arXiv:2606.18208v1 中提出约10亿参数模型，在世界建模任务上超越参数量大百倍的商业 API，核心突破在于架构创新而非单纯堆叠参数。</p>
+      <div class="source">来源：arXiv / 新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-asia">亚洲</span><span class="tag tag-cat">图像编辑</span></div>
+      <h3><a href="https://arxiv.org/abs/2606.16767" target="_blank">香港理工大学联合OPPO：文字+手势协同指导AI图片编辑</a></h3>
+      <p>香港理工大学视觉计算实验室与 OPPO 研究院联合完成研究，论文 arXiv:2606.16767 提出让文字与手势协同指导图像编辑，提升多模态交互的自然度与精确度。</p>
+      <div class="source">来源：arXiv / 新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-asia">亚洲</span><span class="tag tag-cat">临床AI</span></div>
+      <h3><a href="https://arxiv.org/abs/2606.09030" target="_blank">KAIST 提出让大语言模型学会辩证思考的ICU临床风险预测框架TRIAGE</a></h3>
+      <p>KAIST 联合 AITRICS 与威斯康星大学麦迪逊分校在 arXiv:2606.09030 中提出 TRIAGE 框架，通过辩证思考机制提升大语言模型在 ICU 临床风险预测中的可靠性。</p>
+      <div class="source">来源：arXiv / 新浪AI热点小时报</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 硬件/基建 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>硬件 · 算力基建</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">数据中心</span></div>
+      <h3><a href="https://www.datacenterknowledge.com/data-center-hardware/data-center-hardware-highlights-june-2026" target="_blank">6月数据中心硬件盘点：NVIDIA布局5GW能源管线，Google与Blackstone推50亿美元TPU合资</a></h3>
+      <p>Data Center Knowledge 6月汇总显示：NVIDIA 与 Iris Energy 合作布局 5 GW 能源管线；AMD 数据中心业务同比增长 57%；Google 与 Blackstone 推出 50 亿美元 TPU 基础设施合资项目；空心光纤因低延迟受关注。</p>
+      <div class="source">来源：Data Center Knowledge</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">AI芯片</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c00190722u4.html?from=tech" target="_blank">TensorDyne 发布 AI 推理芯片 Napier，从数学底层重构 GPU 算力逻辑</a></h3>
+      <p>TensorDyne 发布 AI 推理芯片 Napier，未走传统堆料路线，而是借鉴对数表思想重新设计核心计算环节，试图从数学底层推翻 GPU 的算力逻辑，为国产/新兴芯片架构提供新思路。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">算力网</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c0019072fh0.html?from=tech" target="_blank">国家发改委：中国智能算力达188.2万P，算力网建设将发挥市场决定性作用</a></h3>
+      <p>国家发改委发言人李超介绍，截至今年3月底我国智能算力达188.2万P，同比增长2.5倍；算力网建设中将发挥市场决定性作用，政府主要负责规划引导与标准统一。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">AI芯片投资</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c0019072fh0.html?from=tech" target="_blank">汤臣倍健拟5000万元投资原粒半导体，布局Chiplet AI推理芯片</a></h3>
+      <p>汤臣倍健公告拟以5000万元投资原粒（北京）半导体技术，持股0.97%；后者专注 Chiplet AI 推理芯片。因董事长配偶间接持股，交易构成关联交易，显示传统产业跨界布局AI算力。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 融资/IPO -->
+<section>
+  <div class="sec-title"><span class="dot"></span>融资 · IPO · 并购</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">自动驾驶IPO</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c00190722u4.html?from=tech" target="_blank">Momenta 获境外发行上市备案，Pre-IPO 融资10亿美元，腾讯与顺为为股东</a></h3>
+      <p>自动驾驶公司 Momenta 取得境外发行上市备案，拟在港交所上市；此前 Pre-IPO 融资10亿美元，股东包括腾讯、顺为资本，自动驾驶赛道资本化进程再提速。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">独角兽估值</span></div>
+      <h3><a href="https://aifundingtracker.com/top-50-ai-startups/" target="_blank">2026年6月全球AI融资Top 50：Anthropic、OpenAI、xAI/SpaceX 领跑</a></h3>
+      <p>AI Funding Tracker 6月榜单显示，Anthropic（约9650亿美元）、OpenAI（约8520亿美元）、xAI/SpaceX（约1.75万亿美元）、Databricks（1340亿美元）、Waymo（1260亿美元）、Figure AI（480亿美元）位居前列。</p>
+      <div class="source">来源：AI Funding Tracker</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">回A解禁</span></div>
+      <h3><a href="https://www.tmtpost.com/8018777.html" target="_blank">智谱与 MiniMax 回A遭遇"七月围城"：港股解禁规模预计达1.55万亿港元</a></h3>
+      <p>智谱、MiniMax 等公司限售股将在7月初集中解禁，叠加两家公司同步启动回A计划，市场正对其估值逻辑重新定价。2026年港股解禁规模预计达1.55万亿港元，同比增近3倍。</p>
+      <div class="source">来源：钛媒体</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 股票/市场 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>股票 · 消费与市场</div>
+  <div class="table-wrap" style="margin-bottom:12px">
+    <table>
+      <thead>
+        <tr><th>主题</th><th>关键信号</th><th>影响方向</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>AI+消费政策</td><td class="up">八部门17项举措</td><td>智能终端、机器人场景放量</td></tr>
+        <tr><td>苹果供应链</td><td class="up">存储芯片成本上涨</td><td>部分产品涨价预期升温</td></tr>
+        <tr><td>618大促</td><td class="up">AI赋能、去套路化</td><td>数码与智能终端消费强劲</td></tr>
+        <tr><td>港股AI解禁</td><td class="down">1.55万亿港元解禁潮</td><td>智谱/MiniMax估值承压</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">政策驱动</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c00190722u4.html?from=tech" target="_blank">商务部等八部门联合发文促进"人工智能+消费"，提出17项举措</a></h3>
+      <p>商务部等8部门联合发布促进"人工智能+消费"的指导意见，提出17项举措，推动智能终端、人形机器人等进入消费场景，旨在打通"有产品无市场""有需求无供给"的结构性堵点。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">供应链</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c00190722u4.html?from=tech" target="_blank">库克确认存储芯片成本上涨，iPhone 18 Pro 涨价预期升温</a></h3>
+      <p>苹果 CEO 库克确认存储芯片成本上涨将带动部分产品涨价，外界推测 iPhone 18 Pro 可能难以避免涨价。AI 功能对端侧存储容量需求激增，正逐步传导至终端定价。</p>
+      <div class="source">来源：新浪AI热点小时报 / 华尔街日报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">618消费</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c00190722u4.html?from=tech" target="_blank">今年618折射消费新变化：从价格战转向AI赋能与品质化</a></h3>
+      <p>新华社分析指出，今年618呈现平台营销"去套路化"、从价格战转向 AI 赋能、消费者更关注品质与个性化、电商节加速出海等趋势，AI 驱动的数码产品消费持续升温。</p>
+      <div class="source">来源：新浪AI热点小时报 / 新华社</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 具身智能 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>具身智能 · 机器人</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">人形机器人</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c00190722u4.html?from=tech" target="_blank">银河通用发布全球首个人形机器人通用小脑模型 AstraBrain-WBC 0.5</a></h3>
+      <p>银河通用机器人发布人形机器人全身实时运控基础模型 AstraBrain-WBC 0.5，基于2万小时人类动作数据训练，参数量8040万，可提升人形机器人在复杂环境中的运动控制能力。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">极限场景</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c0019072fh0.html?from=tech" target="_blank">基于宇树G1改装的人形机器人成功攀登6200米火山，目标挑战珠峰</a></h3>
+      <p>基于宇树 G1 改装的 Pemba 机器人成功登顶厄瓜多尔钦博拉索火山，未来计划挑战喜马拉雅及珠峰。该案例展示了人形机器人在极端地形与环境下的适应潜力。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">实验室</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c0019072fh0.html?from=tech" target="_blank">南京市具身智能机器人重点实验室落户软件谷</a></h3>
+      <p>南京市科技局认定依托南京天创智能科技组建的南京市具身智能机器人重点实验室，地方政府正加速布局具身智能研发基础设施，推动产学研协同。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 政策/安全 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>政策 · 监管 · 安全</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-eu">欧洲</span><span class="tag tag-cat">AI安全</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c00190722u4.html?from=tech" target="_blank">英国国家犯罪局：游戏聊天室与AI工具正被用于精神操控与网络勒索</a></h3>
+      <p>英国国家犯罪局指出，游戏聊天室、匿名社群和 AI 聊天工具正被用于诱导、精神操控、网络勒索及传播危险挑战，呼吁平台加强内容审核与家长监护机制。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">科研组织</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c0019072fh0.html?from=tech" target="_blank">中科院工业人工智能研究所迎来首任党委书记武斌</a></h3>
+      <p>2025年11月挂牌的中科院工业人工智能研究所迎来首任党委书记；6月15日会议宣布武斌任职，标志着国家级工业 AI 研究机构的组织建制进一步完善。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 大厂/其他 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>大厂动态 · 其他</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-asia">亚洲</span><span class="tag tag-cat">AI基建</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c00190722u4.html?from=tech" target="_blank">信实集团董事长：目标打造盈利的人工智能基础设施平台和服务业务</a></h3>
+      <p>印度信实集团董事长表态，集团目标是建设可盈利的人工智能基础设施平台和服务业务，反映全球大型工业集团正将 AI 基础设施作为核心战略资产布局。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">运营商</span></div>
+      <h3><a href="https://k.sina.com.cn/article_7857201856_1d45362c00190722u4.html?from=tech" target="_blank">MWC上海：联通在线展出智家通通、云智手机、云智电脑等AI终端</a></h3>
+      <p>MWC 上海期间，联通在线展出智家通通、云智手机、云智电脑等面向家庭与个人场景的智能产品，运营商正从"连接提供商"向"AI终端与场景运营商"转型。</p>
+      <div class="source">来源：新浪AI热点小时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">跨语言研究</span></div>
+      <h3><a href="https://arxiv.org/abs/2606.15345" target="_blank">早稻田大学等机构揭示跨语言深度研究中的致命盲点</a></h3>
+      <p>早稻田大学、西北大学、理化学研究所 AIP 中心、Snowflake、犹他大学、杜克—新加坡国立大学医学院、东京大学合作在 arXiv:2606.15345 中指出，跨语言研究中语言限制会导致证据错配，影响多语言大模型评估的可靠性。</p>
+      <div class="source">来源：arXiv / 新浪AI热点小时报</div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div>AI 行业日报 · 由 QoderWork 自动生成 · 2026-06-20</div>
+  <div class="disc">本日报内容来自公开网络综合，仅供研究参考，不构成任何投资建议。点击标题可直接跳转原始来源。</div>
+</footer>
+
+</div>
+</body>
+</html>
