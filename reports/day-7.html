@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#0ea5e9">
+<title>AI 行业日报 · 2026-06-21</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 35%, #ffffff 70%, #dbeafe 100%);
+  background-attachment: fixed;
+  color: #0f172a;
+  line-height: 1.65;
+  font-size: 15px;
+  min-height: 100vh;
+  padding: 16px 12px 64px;
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+
+/* Hero */
+.hero {
+  position: relative;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(186, 230, 253, 0.6);
+  border-radius: 22px;
+  padding: 22px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 32px rgba(14, 165, 233, 0.08);
+}
+.hero .badge {
+  display: inline-block; font-size: 12px; font-weight: 600;
+  color: #0369a1; background: rgba(14, 165, 233, 0.12);
+  padding: 4px 10px; border-radius: 999px; margin-bottom: 10px;
+}
+.hero h1 {
+  font-size: 22px; font-weight: 700; color: #0c4a6e;
+  letter-spacing: -0.5px; margin-bottom: 6px;
+}
+.hero .date { font-size: 13px; color: #475569; margin-bottom: 14px; }
+.hero .summary { font-size: 14px; color: #1e293b; line-height: 1.7; }
+.hero .summary strong { color: #0c4a6e; }
+.hero ul { list-style: none; }
+.hero li { margin-bottom: 6px; padding-left: 18px; position: relative; }
+.hero li::before { content: "▸"; position: absolute; left: 0; color: #0284c7; }
+
+/* Section */
+section { margin-bottom: 22px; }
+.sec-title {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 16px; font-weight: 700; color: #0c4a6e;
+  padding: 10px 14px; margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(186, 230, 253, 0.5);
+  border-radius: 14px;
+}
+.sec-title .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+}
+
+/* Grid */
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(186, 230, 253, 0.55);
+  border-radius: 16px;
+  padding: 14px 16px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.05);
+}
+.card:active { transform: scale(0.99); }
+.card .meta {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;
+  font-size: 11px;
+}
+.tag {
+  display: inline-block; padding: 2px 8px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.2px;
+}
+.tag-us { background: rgba(59, 130, 246, 0.12); color: #1d4ed8; }
+.tag-cn { background: rgba(239, 68, 68, 0.12); color: #b91c1c; }
+.tag-eu { background: rgba(168, 85, 247, 0.12); color: #7e22ce; }
+.tag-asia { background: rgba(249, 115, 22, 0.12); color: #c2410c; }
+.tag-global { background: rgba(20, 184, 166, 0.14); color: #0f766e; }
+.tag-cat { background: rgba(14, 165, 233, 0.1); color: #0369a1; }
+
+.card h3 { font-size: 15px; font-weight: 600; line-height: 1.5; margin-bottom: 6px; }
+.card h3 a {
+  color: #0f172a; text-decoration: none;
+  border-bottom: 1px solid transparent; transition: border 0.2s;
+}
+.card h3 a:hover, .card h3 a:active { border-bottom-color: #0ea5e9; color: #0369a1; }
+.card p {
+  font-size: 13.5px; color: #334155; line-height: 1.65;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card .source { font-size: 11.5px; color: #64748b; margin-top: 8px; }
+
+/* Table (stocks) */
+.table-wrap {
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(186, 230, 253, 0.55);
+  border-radius: 16px;
+  padding: 8px;
+}
+table {
+  width: 100%; min-width: 480px; border-collapse: collapse; font-size: 13px;
+}
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(186, 230, 253, 0.4); }
+th { font-weight: 600; color: #0369a1; background: rgba(224, 242, 254, 0.5); font-size: 12.5px; }
+td { color: #1e293b; }
+.up { color: #dc2626; font-weight: 600; }
+.down { color: #16a34a; font-weight: 600; }
+.neutral { color: #0369a1; font-weight: 600; }
+
+/* Footer */
+footer {
+  margin-top: 32px; padding: 18px 16px; text-align: center;
+  font-size: 12px; color: #64748b;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  border: 1px solid rgba(186, 230, 253, 0.4);
+}
+footer .disc { color: #94a3b8; margin-top: 6px; }
+
+@media (min-width: 640px) {
+  body { padding: 24px 20px 80px; font-size: 15.5px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .hero h1 { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hero">
+  <span class="badge">每日简报 · v2026.06.21</span>
+  <h1>AI 行业日报</h1>
+  <div class="date">2026年6月21日 周日 · 覆盖过去24-48小时</div>
+  <ul class="summary">
+    <li><strong>特朗普政府发布6月AI行政令</strong>：要求30天内强化国家安全系统网络防御，推动联邦机构接入前沿AI模型，加速AI创新与安全的平衡。</li>
+    <li><strong>中美AI资本与基建双线升温</strong>：中国拟推出约2950亿美元AI基础设施计划，国产替代比例目标80%；Databricks洽谈1650亿美元新融资，Anthropic估值冲至9650亿美元。</li>
+    <li><strong>AI Agent进入金融与生产环境</strong>：摩根士丹利开放万亿级财富管理平台接口给AI智能体；HPE携手英伟达将代理式AI引入生产环境。</li>
+    <li><strong>AI研报乌龙引发合规关注</strong>：方正证券房地产周报被曝疑似AI生成且虚构国务院会议内容，券商研报质控与AI工具边界再受审视。</li>
+    <li><strong>A股半导体回暖、美股AI交易降温</strong>：6月17日A股半导体板块午后反弹超10股涨停；同期美股AI交易出现抛售降温，板块波动加剧。</li>
+  </ul>
+</div>
+
+<!-- 模型/产品 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>模型 · 产品发布</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">AI赋能宣言</span></div>
+      <h3><a href="https://openai.com/zh-Hans-CN/index/ai-as-the-greatest-source-of-empowerment-for-all/" target="_blank">OpenAI发布《人工智能成为全民赋能的最强力量》愿景文章</a></h3>
+      <p>OpenAI发布中文版愿景文章，强调AI应成为人类历史上最大的赋能来源，推动教育、医疗、创意等领域的普惠化，呼应其近期在产品民主化上的战略转向。</p>
+      <div class="source">来源：OpenAI 官方博客</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-asia">亚洲</span><span class="tag tag-cat">企业级AI</span></div>
+      <h3><a href="https://china.kyodonews.net/articles/-/11327" target="_blank">日立获得Anthropic最新Claude Mythos访问权限，用于关键基础设施网络防御</a></h3>
+      <p>日立与Anthropic达成协议，成为首批获得Claude Mythos最新模型访问权的日本制造商，将AI能力用于能源等关键基础设施的网络防御，凸显AI安全从IT向OT延伸。</p>
+      <div class="source">来源：共同社</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 硬件/基建 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>硬件 · 算力基建</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">国产替代</span></div>
+      <h3><a href="https://enterprisedna.co/resources/news/china-295-billion-ai-data-center-buildout-nvidia-2026/" target="_blank">中国拟推2950亿美元AI基础设施计划，国产芯片替代目标80%</a></h3>
+      <p>据彭博报道，北京正筹备约2万亿元人民币AI基建计划，要求至少80%芯片来自国内供应商，将直接冲击NVIDIA、AMD在华市场份额，华为、阿里、壁仞、摩尔线程等有望受益。</p>
+      <div class="source">来源：Enterprise DNA / Bloomberg</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">产业链研判</span></div>
+      <h3><a href="https://www.cls.cn/detail/2291408" target="_blank">国金证券：2026年算力产业链将进入"全链通胀"周期</a></h3>
+      <p>国金证券研报指出，在新万亿参数模型、多模态爆发与推理需求三重驱动下，算力供需双侧挤压将推动产业链从核心芯片向AIDC、云服务、电力设备、服务器等全环节外溢涨价。</p>
+      <div class="source">来源：财联社 / 国金证券</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">基础设施竞争</span></div>
+      <h3><a href="https://www.eet-china.com/mp/a460566.html" target="_blank">2026年AI策略：全球AI大厂基础设施争夺战升级</a></h3>
+      <p>文章梳理2026年全球科技巨头在数据中心、能源、芯片制造等领域的基建扩张策略，指出"算力即权力"正成为AI竞争的核心逻辑，资本开支规模或将决定模型迭代的节奏。</p>
+      <div class="source">来源：电子工程专辑</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 融资/IPO/并购 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>融资 · IPO · 并购</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">巨额融资</span></div>
+      <h3><a href="https://www.geekwire.com/2026/bezos-ai-startup-prometheus-raises-12b-at-41b-valuation-and-the-ceos-explain-what-theyre-doing/" target="_blank">贝佐斯支持的AI初创公司Prometheus融资，估值达410亿美元</a></h3>
+      <p>由杰夫·贝佐斯支持的AI初创公司Prometheus完成新一轮融资，估值跃升至410亿美元区间，CEO团队阐释其技术路线，显示顶级资本仍在加注基础模型与AI基础设施赛道。</p>
+      <div class="source">来源：GeekWire</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">数据智能</span></div>
+      <h3><a href="https://finance.sina.com.cn/stock/usstock/c/2026-06-09/doc-iniavfsn6367127.shtml" target="_blank">Databricks洽谈新一轮融资，目标估值1650亿至1750亿美元</a></h3>
+      <p>AI数据平台Databricks正洽谈新一轮融资，估值区间较上轮的1340亿美元显著提升；年化营收达54亿美元、同比增长65%，AI相关收入已超14亿美元，CEO认为2026年并非IPO好时机。</p>
+      <div class="source">来源：新浪财经</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">大模型独角兽</span></div>
+      <h3><a href="https://news.cnyes.com/news/id/6472495" target="_blank">Anthropic完成新一轮融资，估值半年翻倍至9650亿美元超越OpenAI</a></h3>
+      <p>据钜亨网报道，Anthropic完成约650亿美元融资，估值升至约9650亿美元，半年内接近翻倍并超过OpenAI的8520亿美元估值，Claude商业化与盈利能力改善成为估值支撑。</p>
+      <div class="source">来源：钜亨网</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat"> mega IPO</span></div>
+      <h3><a href="https://www.tmtpost.com/agent/ai-article?id=16842" target="_blank">AI与航天三巨头2026集体上市：万亿美元募资潮考验美国资本市场</a></h3>
+      <p>SpaceX、OpenAI、Anthropic三大超级独角兽计划在2026年先后上市，合计估值超过3.5万亿美元，潜在募资规模或达万亿美元级别，市场关注其估值合理性与散户承接能力。</p>
+      <div class="source">来源：钛媒体</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 股票/市场 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>股票 · 市场与资金</div>
+  <div class="table-wrap" style="margin-bottom:12px">
+    <table>
+      <thead>
+        <tr><th>市场</th><th>关键信号</th><th>影响方向</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>A股半导体</td><td class="up">午后拉升，超10股涨停或涨超10%</td><td>国产算力、设备材料情绪回暖</td></tr>
+        <tr><td>港股AI</td><td class="down">光通信与AI概念股领跌，恒指跌超1%</td><td>估值承压，资金获利了结</td></tr>
+        <tr><td>美股AI</td><td class="down">AI交易热潮迅速降温，科技股遭抛售</td><td>高估值龙头波动放大</td></tr>
+        <tr><td>AI基建融资</td><td class="up">Databricks、Anthropic估值续创新高</td><td>一级市场仍看好头部基础设施</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">A股</span></div>
+      <h3><a href="https://m.thepaper.cn/newsDetail_forward_33398816" target="_blank">A股尾盘上攻涨幅扩大，半导体产业链盘中崛起</a></h3>
+      <p>6月17日A股三大指数收涨，半导体板块午后强势反弹，盛美上海、华峰测控、普冉股份等超10股涨停或涨超10%，科创50同期大涨超4%，AI硬件与芯片成为资金主攻方向。</p>
+      <div class="source">来源：澎湃新闻 / 华尔街见闻</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">港股</span></div>
+      <h3><a href="https://www.cls.cn/detail/2377966" target="_blank">港股收盘：三大指数均跌超1%，光通信与AI概念股领跌</a></h3>
+      <p>港股AI与光通信板块近期回调明显，指数层面承压，反映市场对高估值科技股获利了结情绪升温，同时等待更多AI商业化落地信号。</p>
+      <div class="source">来源：财联社</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">美股</span></div>
+      <h3><a href="https://www.stcn.com/article/detail/3947117.html" target="_blank">猛烈抛售！美股AI交易热潮迅速降温，科技股大牛市是否终结？</a></h3>
+      <p>美股AI主题交易近期出现快速降温，资金从AI龙头向其他板块轮动，市场开始重新审视高估值与业绩兑现之间的匹配度，波动率显著抬升。</p>
+      <div class="source">来源：证券时报</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 分析师/研报 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>分析师 · 研报</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">研报合规</span></div>
+      <h3><a href="https://www.guancha.cn/GuanJinRong/2026_06_18_820964.shtml" target="_blank">方正证券AI写研报闹乌龙：虚构国务院会议内容引发市场质疑</a></h3>
+      <p>方正证券6月9日发布的房地产周报被指疑似AI生成，其中引用的"2026年6月7日国务院常务会议"并不存在，实际为2024年会议内容的年份替换，引发对券商研报质控与AI工具使用的监管关注。</p>
+      <div class="source">来源：观察者网</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">AI+研报</span></div>
+      <h3><a href="https://www.21jingji.com/article/20260615/herald/b4acc48a7bf7a66b6b14788341d85cbb.html" target="_blank">分析师用AI写研报搞了个大乌龙，行业研究与生成式AI边界引讨论</a></h3>
+      <p>21世纪经济报道梳理近期分析师使用AI工具撰写研报出现的低级错误案例，指出生成式AI在投研领域的应用需建立严格的事实核查与责任追溯机制。</p>
+      <div class="source">来源：21世纪经济报道</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 政策/监管 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>政策 · 监管 · 安全</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">行政令</span></div>
+      <h3><a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" target="_blank">白宫发布6月AI行政令：促进先进人工智能创新与安全</a></h3>
+      <p>特朗普政府发布《促进先进人工智能创新与安全》行政令，要求30天内强化国家安全系统网络防御，推动DHS/CISA向联邦机构、州政府及关键基础设施提供前沿AI模型接入，平衡创新与国家安全。</p>
+      <div class="source">来源：白宫官网</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">法律解读</span></div>
+      <h3><a href="https://guantao.com/page4699" target="_blank">观韬解读特朗普2026年6月AI新行政令的法律影响</a></h3>
+      <p>观韬律师事务所从法律与合规角度解读白宫6月AI行政令，分析其对中美AI企业跨境数据流动、知识产权保护和供应链布局的潜在影响。</p>
+      <div class="source">来源：观韬律师事务所</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-eu">欧洲</span><span class="tag tag-cat">监管态度</span></div>
+      <h3><a href="https://www.cls.cn/detail/2400437" target="_blank">欧盟委员会主席冯德莱恩：人工智能模型蕴含巨大机遇</a></h3>
+      <p>冯德莱恩就AI模型发展前景发表讲话，强调欧盟应在《AI法案》框架下抓住模型技术带来的经济与社会机遇，推动欧洲AI创新与合规并进。</p>
+      <div class="source">来源：财联社</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 大厂动态 -->
+<section>
+  <div class="sec-title"><span class="tag tag-cat">大厂动态 · AI Agent</span></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">金融AI</span></div>
+      <h3><a href="https://www.tmtpost.com/agent/ai-article?id=17548" target="_blank">摩根士丹利开放万亿级资管接口接入AI智能体，华尔街首例第三方AI直连</a></h3>
+      <p>摩根士丹利允许企业AI智能体通过MCP协议直接访问其ShareWorks与Equity Edge平台，管理资产规模合计约1.2万亿美元，试点计划2027年向3400家企业客户全面铺开。</p>
+      <div class="source">来源：钛媒体</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">企业级AI</span></div>
+      <h3><a href="https://www.cls.cn/detail/2401676" target="_blank">慧与科技携手英伟达，将代理式人工智能引入生产环境</a></h3>
+      <p>HPE宣布与NVIDIA合作，将代理式AI（Agentic AI）推向企业生产环境，标志着AI Agent从演示走向实际业务部署，IT基础设施厂商正加速布局下一波AI应用浪潮。</p>
+      <div class="source">来源：财联社</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">大厂竞争</span></div>
+      <h3><a href="https://m.thepaper.cn/newsDetail_forward_32551419" target="_blank">阿里腾讯字节百度打响大模型生态战</a></h3>
+      <p>中国四大互联网巨头围绕大模型生态展开正面竞争，从底层模型、开发者平台到行业解决方案全面交锋，生态闭环能力成为下一阶段胜负手。</p>
+      <div class="source">来源：澎湃新闻</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">战略分化</span></div>
+      <h3><a href="https://m.36kr.com/p/3797196504751367" target="_blank">算不平的AI账：字节收网，阿里腾讯百度还在站岗</a></h3>
+      <p>36氪分析指出，字节跳动在AI业务上率先推进商业化"收网"，而阿里、腾讯、百度仍处于大规模投入期，各家ROI节奏与战略耐心出现明显分化。</p>
+      <div class="source">来源：36氪</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">AI制药</span></div>
+      <h3><a href="https://finance.sina.com.cn/tech/roll/2026-06-12/doc-iniccfxv3557300.shtml" target="_blank">互联网巨头涌入AI制药：字节、百度、腾讯、阿里、京东做出不同选择</a></h3>
+      <p>字节、百度、腾讯、阿里、京东等科技大厂纷纷以不同路径切入AI制药赛道，覆盖靶点发现、分子生成、临床数据分析等环节，AI正成为医药研发的新基础设施。</p>
+      <div class="source">来源：新浪财经</div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div>AI 行业日报 · 由 QoderWork 自动生成 · 2026-06-21</div>
+  <div class="disc">本日报内容来自公开网络综合，仅供研究参考，不构成任何投资建议。点击标题可直接跳转原始来源。</div>
+</footer>
+
+</div>
+</body>
+</html>
