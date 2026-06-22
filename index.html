@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>AI 行业日报</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
+body {
+  font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", sans-serif;
+  background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 50%, #f0f9ff 100%);
+  display: flex;
+}
+/* Sidebar */
+.sidebar {
+  width: 220px; min-width: 220px;
+  height: 100vh; overflow-y: auto;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-right: 1px solid rgba(186,230,253,0.6);
+  padding: 20px 14px;
+  display: flex; flex-direction: column;
+}
+.sidebar h1 {
+  font-size: 18px; font-weight: 700; color: #0c4a6e;
+  margin-bottom: 6px; letter-spacing: -0.3px;
+}
+.sidebar .subtitle {
+  font-size: 12px; color: #64748b; margin-bottom: 18px;
+  padding-bottom: 14px; border-bottom: 1px solid rgba(186,230,253,0.5);
+}
+.nav-list { list-style: none; flex: 1; }
+.nav-list li { margin-bottom: 6px; }
+.nav-list a {
+  display: block; padding: 10px 12px;
+  border-radius: 10px; text-decoration: none;
+  font-size: 14px; color: #334155;
+  transition: all 0.15s ease;
+  line-height: 1.5;
+}
+.nav-list a:hover { background: rgba(14,165,233,0.08); color: #0369a1; }
+.nav-list a.active {
+  background: linear-gradient(135deg, rgba(14,165,233,0.15), rgba(59,130,246,0.1));
+  color: #0c4a6e; font-weight: 600;
+  box-shadow: 0 2px 8px -2px rgba(14,165,233,0.2);
+}
+.nav-list .date-label { font-size: 12px; color: #64748b; display: block; }
+.nav-list .title-label { font-size: 14px; font-weight: 500; }
+.nav-list .empty { font-size: 13px; color: #94a3b8; padding: 10px 12px; }
+/* Main content */
+.main { flex: 1; height: 100vh; }
+.main iframe { width: 100%; height: 100%; border: none; }
+/* Mobile */
+.menu-btn {
+  display: none; position: fixed; top: 12px; left: 12px; z-index: 1000;
+  width: 40px; height: 40px; border-radius: 10px;
+  background: rgba(255,255,255,0.85); backdrop-filter: blur(8px);
+  border: 1px solid rgba(186,230,253,0.6);
+  font-size: 20px; cursor: pointer; color: #0c4a6e;
+  align-items: center; justify-content: center;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed; left: -260px; top: 0; z-index: 999;
+    width: 260px; transition: left 0.25s ease;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+  }
+  .sidebar.open { left: 0; }
+  .menu-btn { display: flex; }
+  .main { width: 100%; }
+  .overlay {
+    display: none; position: fixed; inset: 0; z-index: 998;
+    background: rgba(0,0,0,0.3);
+  }
+  .overlay.show { display: block; }
+}
+</style>
+</head>
+<body>
+
+<button class="menu-btn" onclick="toggleSidebar()">☰</button>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar" id="sidebar">
+  <h1>🌊 AI 行业日报</h1>
+  <div class="subtitle">每日全球 AI 新闻 · 7 天滚动</div>
+  <ul class="nav-list" id="navList"></ul>
+</nav>
+
+<main class="main">
+  <iframe id="reportFrame" src="about:blank"></iframe>
+</main>
+
+<script>
+// ==== NAV_DATA_START ====
+var NAV_DATA = [{"slot": 1, "date": "2026-06-22", "title": "AI行业日报", "weekday": "周一"}, {"slot": 7, "date": "2026-06-21", "title": "AI行业日报", "weekday": "周日"}, {"slot": 6, "date": "2026-06-20", "title": "AI行业日报", "weekday": "周六"}, {"slot": 5, "date": "2026-06-19", "title": "AI行业日报", "weekday": "周五"}, {"slot": 4, "date": "2026-06-18", "title": "AI行业日报", "weekday": "周四"}, {"slot": 3, "date": "2026-06-17", "title": "AI行业日报", "weekday": "周三"}];
+// ==== NAV_DATA_END ====
+
+function renderNav() {
+  var list = document.getElementById('navList');
+  // Sort by date descending
+  var sorted = NAV_DATA.slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
+  if (sorted.length === 0) {
+    list.innerHTML = '<li class="empty">暂无日报</li>';
+    return;
+  }
+  var html = '';
+  sorted.forEach(function(item, idx) {
+    var activeClass = idx === 0 ? ' active' : '';
+    html += '<li><a href="javascript:void(0)" class="nav-item' + activeClass + '" data-slot="' + item.slot + '" onclick="loadReport(this,' + item.slot + ')">';
+    html += '<span class="date-label">' + item.date + ' ' + item.weekday + '</span>';
+    html += '<span class="title-label">' + item.title + '</span>';
+    html += '</a></li>';
+  });
+  list.innerHTML = html;
+  // Load latest
+  if (sorted.length > 0) {
+    loadReport(null, sorted[0].slot);
+  }
+}
+
+function loadReport(el, slot) {
+  document.getElementById('reportFrame').src = 'reports/day-' + slot + '.html';
+  // Update active state
+  var items = document.querySelectorAll('.nav-item');
+  items.forEach(function(a) { a.classList.remove('active'); });
+  if (el) el.classList.add('active');
+  else if (items.length > 0) items[0].classList.add('active');
+  // Close sidebar on mobile
+  if (window.innerWidth <= 768) toggleSidebar();
+}
+
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('show');
+}
+
+renderNav();
+</script>
+</body>
+</html>
