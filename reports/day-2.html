@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#0ea5e9">
+<title>AI 行业日报 · 2026-06-23</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 35%, #ffffff 70%, #dbeafe 100%);
+  background-attachment: fixed;
+  color: #0f172a;
+  line-height: 1.65;
+  font-size: 15px;
+  min-height: 100vh;
+  padding: 16px 12px 64px;
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+
+/* Hero */
+.hero {
+  position: relative;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(186, 230, 253, 0.6);
+  border-radius: 22px;
+  padding: 22px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 32px rgba(14, 165, 233, 0.08);
+}
+.hero .badge {
+  display: inline-block; font-size: 12px; font-weight: 600;
+  color: #0369a1; background: rgba(14, 165, 233, 0.12);
+  padding: 4px 10px; border-radius: 999px; margin-bottom: 10px;
+}
+.hero h1 {
+  font-size: 22px; font-weight: 700; color: #0c4a6e;
+  letter-spacing: -0.5px; margin-bottom: 6px;
+}
+.hero .date { font-size: 13px; color: #475569; margin-bottom: 14px; }
+.hero .summary { font-size: 14px; color: #1e293b; line-height: 1.7; }
+.hero .summary strong { color: #0c4a6e; }
+.hero ul { list-style: none; }
+.hero li { margin-bottom: 6px; padding-left: 18px; position: relative; }
+.hero li::before { content: "▸"; position: absolute; left: 0; color: #0284c7; }
+
+/* Section */
+section { margin-bottom: 22px; }
+.sec-title {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 16px; font-weight: 700; color: #0c4a6e;
+  padding: 10px 14px; margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(186, 230, 253, 0.5);
+  border-radius: 14px;
+}
+.sec-title .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+}
+
+/* Grid */
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(186, 230, 253, 0.55);
+  border-radius: 16px;
+  padding: 14px 16px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.05);
+}
+.card:active { transform: scale(0.99); }
+.card .meta {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;
+  font-size: 11px;
+}
+.tag {
+  display: inline-block; padding: 2px 8px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.2px;
+}
+.tag-us { background: rgba(59, 130, 246, 0.12); color: #1d4ed8; }
+.tag-cn { background: rgba(239, 68, 68, 0.12); color: #b91c1c; }
+.tag-eu { background: rgba(168, 85, 247, 0.12); color: #7e22ce; }
+.tag-asia { background: rgba(249, 115, 22, 0.12); color: #c2410c; }
+.tag-global { background: rgba(20, 184, 166, 0.14); color: #0f766e; }
+.tag-cat { background: rgba(14, 165, 233, 0.1); color: #0369a1; }
+
+.card h3 { font-size: 15px; font-weight: 600; line-height: 1.5; margin-bottom: 6px; }
+.card h3 a {
+  color: #0f172a; text-decoration: none;
+  border-bottom: 1px solid transparent; transition: border 0.2s;
+}
+.card h3 a:hover, .card h3 a:active { border-bottom-color: #0ea5e9; color: #0369a1; }
+.card p {
+  font-size: 13.5px; color: #334155; line-height: 1.65;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card .source { font-size: 11.5px; color: #64748b; margin-top: 8px; }
+
+/* Table (stocks) */
+.table-wrap {
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(186, 230, 253, 0.55);
+  border-radius: 16px;
+  padding: 8px;
+}
+table {
+  width: 100%; min-width: 480px; border-collapse: collapse; font-size: 13px;
+}
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(186, 230, 253, 0.4); }
+th { font-weight: 600; color: #0369a1; background: rgba(224, 242, 254, 0.5); font-size: 12.5px; }
+td { color: #1e293b; }
+.up { color: #dc2626; font-weight: 600; }
+.down { color: #16a34a; font-weight: 600; }
+.neutral { color: #0369a1; font-weight: 600; }
+
+/* Footer */
+footer {
+  margin-top: 32px; padding: 18px 16px; text-align: center;
+  font-size: 12px; color: #64748b;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  border: 1px solid rgba(186, 230, 253, 0.4);
+}
+footer .disc { color: #94a3b8; margin-top: 6px; }
+
+@media (min-width: 640px) {
+  body { padding: 24px 20px 80px; font-size: 15.5px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .hero h1 { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hero">
+  <span class="badge">每日简报 · v2026.06.23</span>
+  <h1>AI 行业日报</h1>
+  <div class="date">2026年6月23日 周二 · 覆盖6月22日-23日</div>
+  <ul class="summary">
+    <li><strong>2026年6月模型发布潮延续</strong>：Anthropic Claude Fable 5、NVIDIA Nemotron 3 Ultra、Moonshot Kimi K2.7 Code、智谱GLM-5.2、MiniMax M3等密集亮相，模型领先优势有效期进一步缩短。</li>
+    <li><strong>中美AI融资估值继续冲高</strong>：月之暗面Kimi reportedly 以300亿美元估值融资20亿美元；Anthropic估值达9650亿美元，xAI/SpaceX合并估值约1.75万亿美元。</li>
+    <li><strong>AI入口补贴战白热化</strong>：阿里、腾讯、百度豪掷红包补贴培养"先问AI"习惯，字节豆包月活超2亿领先，AI入口正重塑流量分发逻辑。</li>
+    <li><strong>算力基建与国产替代并行</strong>：中国拟推约2万亿元AI数据中心计划，要求80%国产芯片；Morgan Stanley预计2028年前全球数据中心建设规模达2.9万亿美元。</li>
+    <li><strong>欧盟AI法案进入倒计时</strong>：2026年8月2日全部条款生效，企业面临高风险系统合规、CE标志及最高3500万欧元罚款。</li>
+  </ul>
+</div>
+
+<!-- 模型/产品 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>模型 · 产品发布</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">模型发布潮</span></div>
+      <h3><a href="https://llm-stats.com/llm-updates" target="_blank">2026年6月AI模型密集发布：Claude Fable 5、Nemotron 3 Ultra、Kimi K2.7 Code等齐亮相</a></h3>
+      <p>据LLM Stats统计，6月已发布或官宣多款重磅模型：Anthropic Claude Fable 5（6月9日）、NVIDIA Nemotron 3 Ultra 550B（6月4日）、Moonshot Kimi K2.7 Code（6月12日）、智谱GLM-5.2（6月16日）、MiniMax M3（6月1日）、Cohere North Mini Code（6月9日）等，模型迭代节奏进一步加快。</p>
+      <div class="source">来源：LLM Stats</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Google</span></div>
+      <h3><a href="https://wavespeed.ai/blog/posts/june-2026-ai-launch-wave/" target="_blank">Google Gemini 3.5 Flash已GA、Pro将于6月推出，定价约每秒百万tokens 1.5/9美元</a></h3>
+      <p>Google Gemini 3.5 Flash已于5月19日全面上市，速度约为Gemini 3.1 Pro的4倍，编程与Agent任务更强；Gemini 3.5 Pro预计6月发布，旨在补齐Flash在推理能力上的差距。</p>
+      <div class="source">来源：WaveSpeed AI</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">xAI</span></div>
+      <h3><a href="https://wavespeed.ai/blog/posts/june-2026-ai-launch-wave/" target="_blank">xAI Grok 5仍在Colossus 2上训练，6月发布概率偏低</a></h3>
+      <p>消息称xAI Grok 5采用约6万亿参数MoE架构、150万token上下文、原生多模态，目前仍在Colossus 2集群训练，6月公开发布概率约12%-33%。</p>
+      <div class="source">来源：WaveSpeed AI</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">G7</span></div>
+      <h3><a href="https://www.cnbc.com/2026/06/17/anthropic-amodei-google-hassabis-us-ai-coalition-g7.html" target="_blank">Anthropic与Google DeepMind CEO在G7呼吁建立美国主导的AI联盟</a></h3>
+      <p>Anthropic的Dario Amodei与Google DeepMind的Demis Hassabis在G7会议期间共同呼吁组建美国主导的AI国际联盟，以在AI安全、标准与治理方面协调西方阵营。</p>
+      <div class="source">来源：CNBC</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 硬件/基建 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>硬件 · 算力基建</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">分析师研判</span></div>
+      <h3><a href="https://www.morganstanley.com/insights/articles/ai-market-trends-institute-2026" target="_blank">Morgan Stanley：AI已成宏观力量，2028年前全球数据中心建设将达2.9万亿美元</a></h3>
+      <p>摩根士丹利将AI定义为"不再只是主题，而是影响GDP、盈利、信贷与地缘的工业建设"；预计约80%相关支出仍在前方，仅数据中心建设或贡献美国今年约25%的GDP增长。</p>
+      <div class="source">来源：Morgan Stanley</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">国产替代</span></div>
+      <h3><a href="https://enterprisedna.co/resources/news/china-295-billion-ai-data-center-buildout-nvidia-2026/" target="_blank">中国拟推约2万亿元AI数据中心计划，要求80%芯片国产以替代NVIDIA/AMD</a></h3>
+      <p>北京正起草五年内约2万亿元的全国AI数据中心网络计划，主要由中移动、中电信运营，资金来自主权债与超长期特别国债；华为、阿里、壁仞、摩尔线程等有望受益。</p>
+      <div class="source">来源：Enterprise DNA / Bloomberg</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">NVIDIA</span></div>
+      <h3><a href="https://www.nextplatform.com/ai/2026/06/02/nvidia-extends-its-grip-on-the-ai-datacenter-outwards/5250344" target="_blank">NVIDIA正将其在AI数据中心的影响力向外延伸</a></h3>
+      <p>The Next Platform分析NVIDIA如何通过芯片、网络、软件与生态系统，将其在AI数据中心的核心地位扩展到更广泛的计算、存储与网络基础设施领域。</p>
+      <div class="source">来源：The Next Platform</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 融资/IPO/并购 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>融资 · IPO · 并购</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">大模型融资</span></div>
+      <h3><a href="https://app.myzaker.com/news/article.php?pk=6a2b70ba8e9f096cb2581cf6" target="_blank">月之暗面Kimi reportedly 融资20亿美元，估值半年涨6倍至300亿美元</a></h3>
+      <p>报道称月之暗面正以约300亿美元估值融资20亿美元，半年前估值约50亿美元；2026年Q1中国AI融资超1100亿元、同比增185%，其中超70%流向月之暗面、智谱与阶跃星辰。</p>
+      <div class="source">来源：Zaker / 投中网</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">机器人IPO</span></div>
+      <h3><a href="https://app.myzaker.com/news/article.php?pk=6a2b70ba8e9f096cb2581cf6" target="_blank">宇树科技IPO获批：募资42.02亿元，估值420亿元</a></h3>
+      <p>宇树科技IPO在73天内获批，拟募资42.02亿元、估值420亿元；国家计划年底前实现万台级规模落地能力，具身智能正从实验室走向产业化。</p>
+      <div class="source">来源：Zaker</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">独角兽估值</span></div>
+      <h3><a href="https://aifundingtracker.com/top-50-ai-startups/" target="_blank">2026年6月全球AI融资Top 50：Anthropic 9650亿、xAI/SpaceX 1.75万亿、OpenAI 8520亿</a></h3>
+      <p>AI Funding Tracker 6月榜单显示，Anthropic以9650亿美元估值居首，OpenAI 8520亿、xAI/SpaceX合并约1.75万亿、Databricks 1340亿、Waymo 1260亿、Figure AI 480亿美元。</p>
+      <div class="source">来源：AI Funding Tracker</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">并购</span></div>
+      <h3><a href="https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html" target="_blank">SpaceX reportedly 以600亿美元收购AI编程初创公司Cursor</a></h3>
+      <p>CNBC报道称SpaceX拟以约600亿美元收购Cursor母公司Anysphere，此举被视为其在AI编程领域追赶 rivals 的重要布局；SpaceX同时正推进创纪录IPO。</p>
+      <div class="source">来源：CNBC / 纽约时报 / 路透社</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 股票/市场 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>股票 · 市场与资金</div>
+  <div class="table-wrap" style="margin-bottom:12px">
+    <table>
+      <thead>
+        <tr><th>市场</th><th>关键信号</th><th>影响方向</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>A股（6月18日午盘）</td><td class="up">科创综指大涨2.81%创新高，半导体AI芯片爆发</td><td>国产算力、芯片设计情绪高涨</td></tr>
+        <tr><td>A股半导体</td><td class="up">寒武纪涨13.31%，海光+6%，兆易+8%</td><td>AI算力链重回科技主线</td></tr>
+        <tr><td>港股</td><td class="down">恒生跌1.86%，科技指数跌1.64%</td><td>新能源、科技龙头承压</td></tr>
+        <tr><td>美股半导体</td><td class="neutral">AI交易情绪分化，Barron's建议区分赢家与炒作</td><td>高估值龙头波动放大</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">A股</span></div>
+      <h3><a href="https://www.chnfund.com/article/AR899b2922-adf9-9393-9dfa-3a21eb4a89a4" target="_blank">A股午盘：科创综指涨2.81%创历史新高，半导体AI芯片爆发</a></h3>
+      <p>6月18日午盘沪指跌0.37%、深证成指涨0.57%、创业板指涨1.39%；科创综指大涨2.81%创历史新高，寒武纪涨13.31%、海光信息涨6%、兆易创新涨8%，半导体与AI芯片成资金主攻方向。</p>
+      <div class="source">来源：中国基金报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">芯片股</span></div>
+      <h3><a href="https://www.barrons.com/articles/chip-stock-rally-2026-nvidia-amd-broadcom-tsm-micron-df290dbc" target="_blank">Barron's：2026年芯片股——如何识别半导体赢家与AI炒作</a></h3>
+      <p>Barron's分析指出，在AI投资热情降温背景下，投资者需区分真正受益AI建设的公司与单纯概念炒作，NVIDIA、AMD、Broadcom、台积电、美光等公司的基本面差异正在拉大。</p>
+      <div class="source">来源：Barron's</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">个股比较</span></div>
+      <h3><a href="https://www.fool.com/investing/2026/06/11/better-artificial-intelligence-ai-stock-buy-in-jun/" target="_blank">6月AI芯片股选择：AMD vs NVIDIA</a></h3>
+      <p>Motley Fool对比NVIDIA与AMD在AI芯片市场的竞争格局，讨论两家公司在数据中心GPU、软件生态与估值方面的相对吸引力。</p>
+      <div class="source">来源：Motley Fool</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 分析师/研报 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>分析师 · 研报</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">宏观研判</span></div>
+      <h3><a href="https://www.morganstanley.com/insights/articles/ai-market-trends-institute-2026" target="_blank">Morgan Stanley：21%的标普500公司已提及AI收益，执行落地者现金流利润率约为全球均值两倍</a></h3>
+      <p>摩根士丹利报告指出，企业AI采用正在拓宽，但市场奖励的是执行而非口号；实现可衡量生产力提升的公司，现金流利润率扩张速度约为全球平均水平两倍。</p>
+      <div class="source">来源：Morgan Stanley</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">支出预测</span></div>
+      <h3><a href="https://app.myzaker.com/news/article.php?pk=6a2b70ba8e9f096cb2581cf6" target="_blank">Gartner预测2026年全球AI支出2.59万亿美元，中国日均Token调用超140万亿</a></h3>
+      <p>Gartner预计2026年全球AI支出达2.59万亿美元、同比增47%；IDC认为行业正从算力与基础模型转向企业应用、Agent AI与大规模智能服务；中国日均Token调用量已超140万亿，两年内增长超1000倍。</p>
+      <div class="source">来源：Zaker / Gartner / IDC</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">券商观点</span></div>
+      <h3><a href="https://www.stcn.com/article/detail/3634239.html" target="_blank">国信证券：算力链有望在强业绩支撑下重回科技投资主线</a></h3>
+      <p>研报指出，随着AI入口战争升温，CPO、液冷、AI服务器、AIDC等算力产业链环节受到分析师密集覆盖，中际旭创、天孚通信、英维克等标的关注度提升。</p>
+      <div class="source">来源：证券时报 / 国信证券</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 政策/监管 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>政策 · 监管 · 安全</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-eu">欧洲</span><span class="tag tag-cat">AI法案</span></div>
+      <h3><a href="https://legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks" target="_blank">欧盟AI法案2026年8月2日全面生效，企业需完成CE标志与高风险系统注册</a></h3>
+      <p>EU AI Act剩余条款将于2026年8月2日适用；高风险AI系统须建立风险管理、数据治理、技术文档、人工监督等机制，违规罚款最高3500万欧元或全球营业额7%。</p>
+      <div class="source">来源：LegalNodes</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">国家安全</span></div>
+      <h3><a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" target="_blank">白宫6月AI行政令：促进先进人工智能创新与安全</a></h3>
+      <p>特朗普政府发布行政令，要求30天内强化国家安全系统网络防御，推动DHS/CISA向联邦机构、州政府及关键基础设施提供前沿AI模型接入，平衡创新与安全。</p>
+      <div class="source">来源：白宫官网</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 大厂动态 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>大厂动态 · AI入口</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">AI入口战</span></div>
+      <h3><a href="https://www.stcn.com/article/detail/3634239.html" target="_blank">字节、阿里、腾讯、百度AI入口激战：红包补贴争夺"先问AI"习惯</a></h3>
+      <p>阿里通义推出"春节30亿免单"活动，腾讯元宝派投入10亿补贴嵌入社交链，百度亦参与红包大战；字节豆包月活超2亿领先，腾讯元宝约9100万、阿里通义约8600万，形成三足鼎立。</p>
+      <div class="source">来源：证券时报</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">腾讯生态</span></div>
+      <h3><a href="https://app.myzaker.com/news/article.php?pk=6a2b70ba8e9f096cb2581cf6" target="_blank">腾讯发布"AI共创营·Buddy AI生态共创计划"</a></h3>
+      <p>腾讯面向开发者与合作伙伴推出AI生态共创计划，旨在通过Buddy平台整合模型能力、场景应用与商业化资源，加速AI Agent在企业与消费场景的落地。</p>
+      <div class="source">来源：Zaker</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">华为云</span></div>
+      <h3><a href="https://app.myzaker.com/news/article.php?pk=6a2b70ba8e9f096cb2581cf6" target="_blank">华为云落地四大"AI梦工厂"：覆盖智慧医疗与具身智能</a></h3>
+      <p>华为云推出四大AI梦工厂产业区，聚焦智慧医疗、具身智能、智能制造等领域，通过"模数共振"计划推动AI与20个行业深度融合。</p>
+      <div class="source">来源：Zaker</div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div>AI 行业日报 · 由 QoderWork 自动生成 · 2026-06-23</div>
+  <div class="disc">本日报内容来自公开网络综合，仅供研究参考，不构成任何投资建议。点击标题可直接跳转原始来源。</div>
+</footer>
+
+</div>
+</body>
+</html>
