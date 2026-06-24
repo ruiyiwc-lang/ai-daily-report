@@ -3,260 +3,490 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>AI 行业日报 · 2026-06-17</title>
+<meta name="theme-color" content="#0ea5e9">
+<title>AI 行业日报 · 2026-06-24</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html { -webkit-text-size-adjust: 100%; }
 body {
-  font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", sans-serif;
-  font-size: 15px; line-height: 1.7; color: #0f172a;
-  background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 50%, #f0f9ff 100%);
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 35%, #ffffff 70%, #dbeafe 100%);
   background-attachment: fixed;
-  min-height: 100vh; padding: 16px 12px 80px;
+  color: #0f172a;
+  line-height: 1.65;
+  font-size: 15px;
+  min-height: 100vh;
+  padding: 16px 12px 64px;
 }
 .wrap { max-width: 720px; margin: 0 auto; }
+
+/* Hero */
 .hero {
-  background: linear-gradient(135deg, rgba(14,165,233,0.18), rgba(59,130,246,0.12));
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.6);
-  border-radius: 22px; padding: 22px 18px; margin-bottom: 18px;
-  box-shadow: 0 8px 28px -8px rgba(14,165,233,0.25);
+  position: relative;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(186, 230, 253, 0.6);
+  border-radius: 22px;
+  padding: 22px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 32px rgba(14, 165, 233, 0.08);
 }
-.hero h1 { font-size: 22px; font-weight: 700; color: #0c4a6e; margin-bottom: 6px; letter-spacing: -0.3px; }
-.hero .date { font-size: 13px; color: #0369a1; opacity: 0.85; margin-bottom: 12px; }
-.hero .summary { font-size: 14px; color: #075985; line-height: 1.75; }
-.hero .summary strong { color: #0c4a6e; font-weight: 600; }
-section { margin-bottom: 20px; }
-section > h2 {
-  font-size: 16px; font-weight: 600; color: #0c4a6e;
-  padding: 8px 14px; margin-bottom: 12px;
-  background: rgba(255,255,255,0.6); backdrop-filter: blur(8px);
-  border-left: 4px solid #0ea5e9; border-radius: 0 10px 10px 0;
+.hero .badge {
+  display: inline-block; font-size: 12px; font-weight: 600;
+  color: #0369a1; background: rgba(14, 165, 233, 0.12);
+  padding: 4px 10px; border-radius: 999px; margin-bottom: 10px;
+}
+.hero h1 {
+  font-size: 22px; font-weight: 700; color: #0c4a6e;
+  letter-spacing: -0.5px; margin-bottom: 6px;
+}
+.hero .date { font-size: 13px; color: #475569; margin-bottom: 14px; }
+.hero .summary { font-size: 14px; color: #1e293b; line-height: 1.7; }
+.hero .summary strong { color: #0c4a6e; }
+.hero ul { list-style: none; }
+.hero li { margin-bottom: 6px; padding-left: 18px; position: relative; }
+.hero li::before { content: "▸"; position: absolute; left: 0; color: #0284c7; }
+
+/* Section */
+section { margin-bottom: 22px; }
+.sec-title {
   display: flex; align-items: center; gap: 8px;
+  font-size: 16px; font-weight: 700; color: #0c4a6e;
+  padding: 10px 14px; margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(186, 230, 253, 0.5);
+  border-radius: 14px;
 }
-section > h2 .count { font-size: 12px; font-weight: 400; color: #64748b; }
+.sec-title .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+}
+
+/* Grid */
 .grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+
+/* Card */
 .card {
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(186,230,253,0.7);
-  border-radius: 16px; padding: 14px 14px;
-  box-shadow: 0 4px 14px -6px rgba(2,132,199,0.12);
-  transition: transform 0.15s ease;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(186, 230, 253, 0.55);
+  border-radius: 16px;
+  padding: 14px 16px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.05);
 }
-.card:active { transform: scale(0.985); }
-.card h3 {
-  font-size: 15px; font-weight: 600; line-height: 1.5;
-  margin-bottom: 8px; color: #0f172a;
+.card:active { transform: scale(0.99); }
+.card .meta {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;
+  font-size: 11px;
 }
-.card h3 a { color: inherit; text-decoration: none; }
-.card h3 a:hover { color: #0284c7; }
-.card p { font-size: 13.5px; color: #334155; line-height: 1.65; }
-.card .source { font-size: 12px; color: #64748b; margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(148,163,184,0.3); }
-.card .source a { color: #0284c7; text-decoration: none; }
-.region {
-  display: inline-block; font-size: 11px; font-weight: 500;
-  padding: 2px 8px; border-radius: 999px; margin-right: 6px;
-  vertical-align: middle; line-height: 1.5;
+.tag {
+  display: inline-block; padding: 2px 8px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.2px;
 }
-.r-us { background: #dbeafe; color: #1e40af; }
-.r-cn { background: #fee2e2; color: #b91c1c; }
-.r-eu { background: #ede9fe; color: #6d28d9; }
-.r-asia { background: #ffedd5; color: #c2410c; }
-.r-global { background: #cffafe; color: #0e7490; }
-.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 14px; background: rgba(255,255,255,0.7); padding: 4px; }
-table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 13.5px; }
-table th, table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(186,230,253,0.6); white-space: nowrap; }
-table th { background: rgba(186,230,253,0.4); font-weight: 600; color: #0c4a6e; font-size: 13px; }
-.up { color: #16a34a; font-weight: 600; }
-.down { color: #dc2626; font-weight: 600; }
-.flat { color: #64748b; }
-.footer {
-  text-align: center; font-size: 12px; color: #64748b;
-  padding: 18px 12px; margin-top: 24px;
-  background: rgba(255,255,255,0.5); border-radius: 14px;
+.tag-us { background: rgba(59, 130, 246, 0.12); color: #1d4ed8; }
+.tag-cn { background: rgba(239, 68, 68, 0.12); color: #b91c1c; }
+.tag-eu { background: rgba(168, 85, 247, 0.12); color: #7e22ce; }
+.tag-asia { background: rgba(249, 115, 22, 0.12); color: #c2410c; }
+.tag-global { background: rgba(20, 184, 166, 0.14); color: #0f766e; }
+.tag-cat { background: rgba(14, 165, 233, 0.1); color: #0369a1; }
+
+.card h3 { font-size: 15px; font-weight: 600; line-height: 1.5; margin-bottom: 6px; }
+.card h3 a {
+  color: #0f172a; text-decoration: none;
+  border-bottom: 1px solid transparent; transition: border 0.2s;
 }
-.footer .disclaimer { color: #94a3b8; margin-top: 6px; }
-@media (min-width: 640px) { body { font-size: 16px; padding: 24px 20px; } .grid { grid-template-columns: 1fr 1fr; } .hero h1 { font-size: 26px; } }
+.card h3 a:hover, .card h3 a:active { border-bottom-color: #0ea5e9; color: #0369a1; }
+.card p {
+  font-size: 13.5px; color: #334155; line-height: 1.65;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card .source { font-size: 11.5px; color: #64748b; margin-top: 8px; }
+
+/* Table (stocks) */
+.table-wrap {
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(186, 230, 253, 0.55);
+  border-radius: 16px;
+  padding: 8px;
+}
+table {
+  width: 100%; min-width: 480px; border-collapse: collapse; font-size: 13px;
+}
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(186, 230, 253, 0.4); }
+th { font-weight: 600; color: #0369a1; background: rgba(224, 242, 254, 0.5); font-size: 12.5px; }
+td { color: #1e293b; }
+.up { color: #dc2626; font-weight: 600; }
+.down { color: #16a34a; font-weight: 600; }
+.neutral { color: #0369a1; font-weight: 600; }
+
+/* Footer */
+footer {
+  margin-top: 32px; padding: 18px 16px; text-align: center;
+  font-size: 12px; color: #64748b;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  border: 1px solid rgba(186, 230, 253, 0.4);
+}
+footer .disc { color: #94a3b8; margin-top: 6px; }
+
+@media (min-width: 640px) {
+  body { padding: 24px 20px 80px; font-size: 15.5px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .hero h1 { font-size: 26px; }
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header class="hero">
-    <h1>🌊 AI 行业日报</h1>
-    <div class="date">2026 年 6 月 17 日（周三） · 覆盖 6 月 16 日全球行情与新闻</div>
-    <div class="summary">
-      昨日五大要点：<br>
-      ① <strong>史上最大 AI 并购：</strong>SpaceX 以 $600 亿收购 AI 编程公司 Cursor，马斯克 IPO 后 M&A 火力全开；<br>
-      ② <strong>AI 三巨头冲刺 IPO：</strong>OpenAI 秘密递交招股书（Reuters 6/8），Anthropic 已正式提交（NYT 6/1），SpaceX 已上市——总估值超 $3 万亿；<br>
-      ③ <strong>Google × SpaceX $300 亿 AI 超算协议：</strong>锁定太空+地面算力，AI 基建进入"轨道级"；<br>
-      ④ <strong>NVIDIA 太空计算：</strong>Space-1 Vera Rubin Module 发布，数据中心级 AI 算力首次进入近地轨道；<br>
-      ⑤ <strong>A 股结构分化：</strong>三大指数下跌，芯片半导体逆势拉升，AI 应用方向集体走强，入口争夺白热化。
+<div class="hero">
+  <span class="badge">每日简报 · v2026.06.24</span>
+  <h1>AI 行业日报</h1>
+  <div class="date">2026年6月24日 周三 · 覆盖6月23日-24日</div>
+  <ul class="summary">
+    <li><strong>SpaceX连下两城</strong>：以600亿美元收购AI编程工具Cursor/Anysphere，创下风投支持创业公司最大收购案；同日斩获Reflection AI最高63亿美元算力大单。</li>
+    <li><strong>模型层进入“按量付费+开源追赶”新阶段</strong>：Anthropic Fable 5取消订阅改为按量计费；智谱GLM-5.2开源后在Design Arena登顶，价格仅为Fable 5十分之一。</li>
+    <li><strong>Gemini 3.5 Pro正式入市</strong>：Google确认6月23-30日全面上市，200万token上下文窗口，进一步压缩前沿模型领先优势周期。</li>
+    <li><strong>中美资本开支与合规同步升温</strong>：Anthropic完成650亿美元H轮融资估值9650亿美元；42个州总检察长联合调查OpenAI进入传票阶段；慕尼黑法院裁定谷歌须对AI Overview错误负责。</li>
+    <li><strong>算力基建进入重资产军备竞赛</strong>：微软在得州投资300-400亿美元建2吉瓦园区；Anthropic签署超1吉瓦数据中心租约；摩根士丹利预计2028年前全球数据中心建设投入2.9万亿美元。</li>
+  </ul>
+</div>
+
+<!-- 模型/产品 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>模型 · 产品发布</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Google</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">Gemini 3.5 Pro进入GA窗口期：200万token上下文，Deep Think需Ultra订阅</a></h3>
+      <p>Google确认Gemini 3.5 Pro将于6月23日至30日全面上市，支持200万token上下文窗口；Deep Think模式需250美元/月Ultra订阅，预估输入每百万token 15美元、输出60美元。</p>
+      <div class="source">来源：Build Fast With AI / Google</div>
     </div>
-  </header>
 
-  <section>
-    <h2>🚀 模型与产品发布 <span class="count">2 条</span></h2>
-    <div class="grid">
-
-      <div class="card">
-        <h3><a href="http://nvidianews.nvidia.com/news/space-computing" target="_blank"><span class="region r-us">美国</span>NVIDIA 发布 Space-1 Vera Rubin 太空计算模块</a></h3>
-        <p>NVIDIA 正式推出 Space-1 Vera Rubin Module，将数据中心级 AI 计算能力送入近地轨道。该平台基于 Vera Rubin 架构，专为太空环境优化，支持卫星端实时推理与自主决策，标志着 AI 算力正式"走出地球"。</p>
-        <p class="source">来源：<a href="http://nvidianews.nvidia.com/news/space-computing">NVIDIA Newsroom</a></p>
-      </div>
-
-      <div class="card">
-        <h3><a href="https://www.tomshardware.com/pc-components/cpus/demand-for-data-center-cpus-has-surged-and-ai-agents-are-responsible-why-the-cpu-to-gpu-ratio-is-more-important-than-ever-for-hyperscalers" target="_blank"><span class="region r-global">全球</span>AI Agent 推动数据中心 CPU 需求激增：CPU:GPU 比率成关键</a></h3>
-        <p>Tom's Hardware 报道，随着 AI Agent 大规模部署，数据中心 CPU 需求显著飙升。超大规模客户的 CPU 与 GPU 配比已成为衡量 AI 基建效率的核心指标，推理侧对 CPU 编排能力的需求远超预期。</p>
-        <p class="source">来源：<a href="https://www.tomshardware.com/pc-components/cpus/demand-for-data-center-cpus-has-surged-and-ai-agents-are-responsible-why-the-cpu-to-gpu-ratio-is-more-important-than-ever-for-hyperscalers">Tom's Hardware</a></p>
-      </div>
-
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Anthropic</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">Anthropic Fable 5转为按量付费：订阅不再包含，API价为Opus 4.8两倍</a></h3>
+      <p>6月23日起，Fable 5不再包含在订阅中，改为按量计费：输入token每百万10美元、输出token每百万50美元，是Claude Opus 4.8价格的两倍，标志着顶尖模型定价策略向API化倾斜。</p>
+      <div class="source">来源：Build Fast With AI / Anthropic</div>
     </div>
-  </section>
 
-  <section>
-    <h2>🔧 硬件与基础设施 <span class="count">3 条</span></h2>
-    <div class="grid">
-
-      <div class="card">
-        <h3><a href="https://m.chaum.net/first-dry/Google-Signs-30-Billion-Deal-with-SpaceX-for-AI-Supercomputing-Power-Ahead-of-SpaceX-IPO-29-17685" target="_blank"><span class="region r-us">美国</span>Google 与 SpaceX 签署 $300 亿 AI 超算合作协议</a></h3>
-        <p>报道称 Google 与 SpaceX 达成一项价值 $300 亿的 AI 超级计算合作协议，涵盖轨道数据中心与地面算力资源。这是继微软–OpenAI、谷歌–Anthropic 之后又一笔超长期 AI 基建锁定。</p>
-        <p class="source">来源：Chaum / SpaceX IPO 前公告</p>
-      </div>
-
-      <div class="card">
-        <h3><a href="https://www.manufacturingdive.com/news/opinion-omdia-ai-semiconductor-chip-scarcity/817172/" target="_blank"><span class="region r-global">全球</span>2026 AI 芯片产能延迟持续：半导体短缺仍为最大瓶颈</a></h3>
-        <p>Manufacturing Dive / Omdia 分析指出，尽管各方大规模投资，2026 年 AI 芯片产能交付仍面临严重延迟。先进制程产能受限叠加需求爆发式增长，半导体短缺将贯穿全年。</p>
-        <p class="source">来源：<a href="https://www.manufacturingdive.com/news/opinion-omdia-ai-semiconductor-chip-scarcity/817172/">Manufacturing Dive / Omdia</a></p>
-      </div>
-
-      <div class="card">
-        <h3><a href="https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/03/amd-s-next-generation-ai-chips-set-to-power-2026-data-center-growth" target="_blank"><span class="region r-us">美国</span>S&P Global：AMD 下一代 AI 芯片驱动 2026 数据中心增长</a></h3>
-        <p>S&P Global Market Intelligence 研报指出，AMD 下一代 AI 芯片将成为 2026 年数据中心增长核心驱动力。数据中心 GPU 营收预计同比增长 114%，AMD 正加速缩小与 NVIDIA 的份额差距。</p>
-        <p class="source">来源：<a href="https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/03/amd-s-next-generation-ai-chips-set-to-power-2026-data-center-growth">S&P Global Market Intelligence</a></p>
-      </div>
-
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">OpenAI</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">GPT-5.6预计6月底或7月初发布，Fable 5 SWE-bench Pro达80.3%</a></h3>
+      <p>消息称OpenAI GPT-5.6有望在6月底或7月初亮相；同期Fable 5在SWE-bench Pro编程基准上达到80.3%，Gemini 3.5 Pro与GPT-5.6正形成三足鼎立。</p>
+      <div class="source">来源：Build Fast With AI</div>
     </div>
-  </section>
 
-  <section>
-    <h2>💰 融资 · IPO · 并购 <span class="count">4 条</span></h2>
-    <div class="grid">
-
-      <div class="card">
-        <h3><a href="https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html" target="_blank"><span class="region r-us">美国</span>SpaceX 以 $600 亿收购 Cursor：史上最大 AI 并购</a></h3>
-        <p>6/16 SpaceX 正式宣布以 $600 亿收购 AI 编程公司 Cursor。交易预计 Q3 完成。Fortune 指出 SpaceX IPO 后股价飙升，几天内即"赚回"整笔交易对价。这是 AI 编程赛道迄今最大收购。</p>
-        <p class="source">来源：<a href="https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html">CNBC</a> / <a href="https://www.forbes.com/sites/siladityaray/2026/06/16/spacex-will-buy-ai-coding-firm-cursor-for-60-billion/">Forbes</a> / <a href="https://fortune.com/2026/06/16/elon-musk-spacex-ipo-ai-coding-startup-cursor-acquisition/">Fortune</a></p>
-      </div>
-
-      <div class="card">
-        <h3><a href="https://www.reuters.com/technology/openai-files-us-ipo-after-anthropic-ai-giants-head-public-markets-2026-06-08/" target="_blank"><span class="region r-us">美国</span>OpenAI 秘密提交美国 IPO 申请</a></h3>
-        <p>Reuters 6/8 报道：OpenAI 已秘密提交美国 IPO 文件，紧随 Anthropic 之后冲击公开市场。公司今年 3 月完成 $1220 亿融资后估值约 $8520 亿，IPO 或于 Q3-Q4 完成。</p>
-        <p class="source">来源：<a href="https://www.reuters.com/technology/openai-files-us-ipo-after-anthropic-ai-giants-head-public-markets-2026-06-08/">Reuters 6/8</a></p>
-      </div>
-
-      <div class="card">
-        <h3><a href="https://www.nytimes.com/2026/06/01/technology/anthropic-ipo.html" target="_blank"><span class="region r-us">美国</span>Anthropic 正式递交 IPO 招股书</a></h3>
-        <p>NYT 6/1 报道：Anthropic 正式向 SEC 提交 IPO 招股书。在今年 2 月 $650 亿 H 轮融资后估值约 $9650 亿，市场预期上市后冲击万亿美元。Claude 系列模型用户量与营收的高速增长构成核心叙事。</p>
-        <p class="source">来源：<a href="https://www.nytimes.com/2026/06/01/technology/anthropic-ipo.html">NYT 6/1</a> / <a href="https://www.zacks.com/featured-articles/761/anthropic-ipo">Zacks</a></p>
-      </div>
-
-      <div class="card">
-        <h3><a href="https://www.tmtpost.com/agent/ai-article?id=16842" target="_blank"><span class="region r-global">全球</span>三巨头集体 IPO：SpaceX/OpenAI/Anthropic 总估值超 $3 万亿</a></h3>
-        <p>钛媒体 / MacroMicro 综述：SpaceX（已上市）、OpenAI、Anthropic 三家拟于 2026 年 6-10 月集体上市，合计估值超 $3 万亿。这是美国资本市场自 2000 年以来最密集的超级 IPO 潮。</p>
-        <p class="source">来源：<a href="https://www.tmtpost.com/agent/ai-article?id=16842">钛媒体</a> / <a href="https://www.macromicro.me/blog/market-update-three-mega-ipo-fundraising-waves-are-coming-the-ai-capital-war-has-officially-begun">MacroMicro</a></p>
-      </div>
-
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">智谱AI</span></div>
+      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">智谱开源GLM-5.2在Design Arena登顶，价格约为Fable 5十分之一</a></h3>
+      <p>智谱AI开源GLM-5.2模型，在网页设计盲测平台Design Arena中登顶，定价仅约为Fable 5的十分之一，显示国产开源模型在特定垂直场景具备成本与性能双重竞争力。</p>
+      <div class="source">来源：钛媒体 / Edge AI Daily</div>
     </div>
-  </section>
 
-  <section>
-    <h2>📈 AI 股票 / ETF 行情（2026-06-16）</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>板块 / 标的</th><th>市场</th><th>6/16 表现</th><th>关键驱动</th></tr></thead>
-        <tbody>
-          <tr><td>三大指数</td><td>A 股</td><td class="down">集体下跌</td><td>外围扰动 / 获利回吐</td></tr>
-          <tr><td>芯片半导体板块</td><td>A 股</td><td class="up">逆势拉升</td><td>华虹、京东方涨停</td></tr>
-          <tr><td>AI 应用方向</td><td>A 股</td><td class="up">集体走强</td><td>开普云 20% 涨停</td></tr>
-          <tr><td>恒生指数</td><td>港股</td><td class="down">跌超 1%</td><td>科网股继续承压</td></tr>
-          <tr><td>华虹半导体</td><td>港股</td><td class="up">涨近 4%</td><td>芯片板块逆势走强</td></tr>
-          <tr><td>SpaceX (SPCX)</td><td>美股</td><td class="up">大幅上涨</td><td>$600 亿 Cursor 收购利好</td></tr>
-          <tr><td>费城半导体指数</td><td>美股</td><td class="flat">震荡修复</td><td>6/5 暴跌 10% 后回稳</td></tr>
-        </tbody>
-      </table>
+    <div class="card">
+      <div class="meta"><span class="tag tag-asia">亚洲</span><span class="tag tag-cat">Sakana AI</span></div>
+      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">Sakana AI发布Fugu编排模型，多基准追平Fable与Mythos</a></h3>
+      <p>日本Sakana AI推出Fugu“学习型协调器”，可调度多专家模型协同工作，在多个基准测试中追平Anthropic Fable和Mythos，代表模型编排（orchestration）成为开源追赶的新路径。</p>
+      <div class="source">来源：钛媒体 / Edge AI Daily</div>
     </div>
-    <div class="grid" style="margin-top:12px;">
-      <div class="card">
-        <h3><a href="https://wallstreetcn.com/articles/3773833" target="_blank"><span class="region r-cn">中国</span>A 股芯片半导体逆势拉升，京东方涨停</a></h3>
-        <p>华尔街见闻：A 股三大指数集体走低，但芯片半导体板块逆势大涨。华虹半导体港股涨近 4%，京东方 A 股涨停，AI 应用方向开普云 20% 涨停，瑞芯微、启明信息等多股涨停。</p>
-        <p class="source">来源：<a href="https://wallstreetcn.com/articles/3773833">华尔街见闻</a> / <a href="https://www.chnfund.com/article/ARf8cf878d-3a93-e3e5-7afd-3a1bfbb633c6">中国基金报</a></p>
-      </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">OpenAI</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">OpenAI收购Astral，将uv/ruff整合进Codex AI编程代理栈</a></h3>
+      <p>OpenAI收购Astral，获得Python工具uv和ruff，计划整合进Codex AI编程代理栈，进一步夯实其在AI原生开发工具链的布局，开源许可后续影响尚待观察。</p>
+      <div class="source">来源：Build Fast With AI</div>
     </div>
-  </section>
 
-  <section>
-    <h2>🔍 分析师 / 投行研判 <span class="count">2 条</span></h2>
-    <div class="grid">
-
-      <div class="card">
-        <h3><a href="https://fortune.com/2026/06/16/elon-musk-spacex-ipo-ai-coding-startup-cursor-acquisition/" target="_blank"><span class="region r-us">美国</span>Fortune：SpaceX IPO 后 M&A 火力全开的底层逻辑</a></h3>
-        <p>Fortune 6/16 深度分析：SpaceX 上市后股价飙升，几天内市值增量即覆盖 $600 亿 Cursor 交易对价。这揭示了马斯克"IPO→市值膨胀→收购 AI 核心资产"的全新 M&A 路径。</p>
-        <p class="source">来源：<a href="https://fortune.com/2026/06/16/elon-musk-spacex-ipo-ai-coding-startup-cursor-acquisition/">Fortune 6/16</a></p>
-      </div>
-
-      <div class="card">
-        <h3><a href="https://www.stcn.com/article/detail/3947364.html" target="_blank"><span class="region r-us">美国</span>费城半导体 6/5 暴跌 10% 后市场修复路径</a></h3>
-        <p>证券时报回顾：美东时间 6/5 费城半导体指数暴跌逾 10%，成份股单日市值合计蒸发数千亿美元。此后市场进入修复阶段，机构观点分化——有声音称"AI 大牛市遭遇结构性重击"。</p>
-        <p class="source">来源：<a href="https://www.stcn.com/article/detail/3947364.html">证券时报</a></p>
-      </div>
-
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">OpenAI</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">OpenAI推出Daybreak网络安全计划，对标Anthropic Project Glasswing</a></h3>
+      <p>OpenAI发布Daybreak网络安全计划，结合GPT-5.5与Codex Security，直接对标Anthropic 4月推出的Project Glasswing，AI安全能力正成为头部实验室竞争的新战场。</p>
+      <div class="source">来源：Build Fast With AI</div>
     </div>
-  </section>
 
-  <section>
-    <h2>🛡️ 政策 · 安全 · 监管 <span class="count">2 条</span></h2>
-    <div class="grid">
-
-      <div class="card">
-        <h3><a href="https://international.caixin.com/2026-06-04/102450872.html" target="_blank"><span class="region r-us">美国</span>特朗普签署《促进高级人工智能创新与安全》行政令</a></h3>
-        <p>财新网：6/2 特朗普正式签署行政令，要求联邦机构在促进 AI 创新的同时建立安全评估框架。重点涵盖前沿模型能力评估、关键基础设施 AI 应用审查、以及对抗性 AI 威胁防范。</p>
-        <p class="source">来源：<a href="https://international.caixin.com/2026-06-04/102450872.html">财新网 6/4</a></p>
-      </div>
-
-      <div class="card">
-        <h3><a href="https://www.instagram.com/p/DZR9DdKE1da/" target="_blank"><span class="region r-global">全球</span>OpenAI/Anthropic/DeepMind CEO 联合呼吁强制 DNA 合成筛查</a></h3>
-        <p>OpenAI、Anthropic、Google DeepMind 三家 CEO 罕见联合发声，呼吁各国政府对 DNA 合成实施强制筛查（mandatory screening），以防 AI 被用于设计生物武器。这是三大实验室首次在安全政策上统一立场。</p>
-        <p class="source">来源：Instagram / AI Insiders 6/16</p>
-      </div>
-
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Google</span></div>
+      <h3><a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank">Google I/O 2026：AI搜索进入代理平台新纪元</a></h3>
+      <p>Google在I/O 2026宣布Search转向AI代理平台，推出Gemini Spark等始终在线的AI Agent能力，Search从“信息检索”向“任务执行”演进。</p>
+      <div class="source">来源：Google Blog</div>
     </div>
-  </section>
 
-  <section>
-    <h2>📰 大厂动态 <span class="count">2 条</span></h2>
-    <div class="grid">
-
-      <div class="card">
-        <h3><a href="https://www.stcn.com/article/detail/3634239.html" target="_blank"><span class="region r-cn">中国</span>AI 超级入口争夺战升温：腾讯阿里字节影子股全线活跃</a></h3>
-        <p>证券时报：AI 技术推动"超级入口"从概念走向现实。腾讯、阿里、字节跳动围绕 AI 入口展开激烈竞争，相关影子股（概念受益标的）在 A 股/港股全线活跃。</p>
-        <p class="source">来源：<a href="https://www.stcn.com/article/detail/3634239.html">证券时报</a></p>
-      </div>
-
-      <div class="card">
-        <h3><a href="https://m.36kr.com/p/3697425974013571" target="_blank"><span class="region r-cn">中国</span>36氪：AI 入口分化——字节阿里主攻 vs 百度腾讯转守</a></h3>
-        <p>36 氪深度分析：四大巨头 AI 入口战略已明显分化。字节主打"娱乐+互动"、阿里聚焦"AI+消费"形成进攻态势；百度、腾讯则从"全面进攻"转向"生态防御"，格局正在固化。</p>
-        <p class="source">来源：<a href="https://m.36kr.com/p/3697425974013571">36氪</a></p>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="footer">
-    生成时间：2026-06-17 09:30 CST · QoderWork AI Daily Report v2.1（覆盖 6/16 全球行情与新闻）
-    <div class="disclaimer">本报告由公开信息整理而成，仅供研究参考，不构成任何投资建议。</div>
   </div>
+</section>
+
+<!-- 硬件/基建 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>硬件 · 算力基建</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">NVIDIA</span></div>
+      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">英伟达发布Halos for Robotics全栈机器人安全系统</a></h3>
+      <p>英伟达推出Halos for Robotics，目标将机器人安全认证周期从4-5年压缩至约2年，进一步将AI芯片优势延伸至物理世界与机器人产业链。</p>
+      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">NVIDIA</span></div>
+      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">英伟达Rubin平台采用45°C高温液冷，PUE可降至1.1-1.2</a></h3>
+      <p>Rubin平台实现100%全液冷散热，采用45°C高温液冷方案，数据中心PUE有望降至1.1-1.2，可显著降低AI数据中心的冷却能耗与运营成本。</p>
+      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Microsoft</span></div>
+      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">微软在得州投资300-400亿美元建设2吉瓦数据中心园区</a></h3>
+      <p>微软正在得州皮科斯市建设约2吉瓦数据中心园区，总投资约300-400亿美元；同时与雪佛龙签署20年天然气协议，为AI数据中心供电。</p>
+      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Anthropic</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">Anthropic签署12个以上美国数据中心租约，总容量超1吉瓦</a></h3>
+      <p>Anthropic与Google合作，在美国签署超过12个数据中心租约，总容量超过1吉瓦；此前还从xAI Colossus租用300兆瓦，月租约12.5亿美元，算力锁定成为竞争壁垒。</p>
+      <div class="source">来源：Build Fast With AI</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">能源监管</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">FERC向六家电网运营商发说明理由令，加快AI数据中心并网</a></h3>
+      <p>美国联邦能源监管委员会（FERC）6月18日向六家区域电网运营商发出“说明理由令”，要求改革互联框架，加速AI数据中心电力并网，缓解算力扩张的能源瓶颈。</p>
+      <div class="source">来源：Build Fast With AI / FERC</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-asia">亚洲</span><span class="tag tag-cat">联发科</span></div>
+      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">联发科成谷歌TPU关键替代供应商，预计2028年占AI ASIC服务器26%</a></h3>
+      <p>联发科进入谷歌TPU供应链成为关键替代供应商，预计2028年将占全球AI ASIC服务器出货量约26%，ASIC生态多元化正在削弱GPU单一供应格局。</p>
+      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">国产替代</span></div>
+      <h3><a href="https://enterprisedna.co/resources/news/china-295-billion-ai-data-center-buildout-nvidia-2026/" target="_blank">中国拟推约2万亿元AI基础设施计划，要求80%国产芯片</a></h3>
+      <p>北京正筹备约2万亿元人民币AI数据中心建设计划，目标五年内建成全国性网络，并要求至少80% AI芯片来自国内供应商，将直接冲击NVIDIA、AMD在华份额。</p>
+      <div class="source">来源：Enterprise DNA / Bloomberg</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 融资/IPO/M&A -->
+<section>
+  <div class="sec-title"><span class="dot"></span>融资 · IPO · 并购</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">SpaceX</span></div>
+      <h3><a href="https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html" target="_blank">SpaceX以600亿美元收购AI编程工具Cursor/Anysphere</a></h3>
+      <p>SpaceX以全股票交易方式收购Cursor母公司Anysphere，交易价值约600亿美元，创下风投支持创业公司最大收购案；Cursor年化收入约40亿美元，拥有5万多家企业客户。</p>
+      <div class="source">来源：CNBC</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">SpaceX</span></div>
+      <h3><a href="https://wap.eastmoney.com/a/202606243780161243.html" target="_blank">SpaceX斩获Reflection AI最高63亿美元算力大单</a></h3>
+      <p>SpaceX与开源AI初创公司Reflection AI达成算力合作协议，合同总价值最高达63亿美元；2026年7月至2029年间，Reflection每月向SpaceX支付1.5亿美元使用Colossus及GB300基础设施。</p>
+      <div class="source">来源：东方财富</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Anthropic</span></div>
+      <h3><a href="https://www.cls.cn/detail/2385245" target="_blank">Anthropic完成650亿美元H轮融资，估值9650亿美元，存储三巨头参投</a></h3>
+      <p>Anthropic完成65亿美元H轮融资，投后估值9650亿美元，领投方包括Altimeter、Dragoner、Greenoaks、红杉资本；美光、三星电子、SK海力士三大存储巨头参投，年化收入突破470亿美元。</p>
+      <div class="source">来源：财联社</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Anthropic</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">Anthropic目标10月IPO，估值9650亿美元，预计Q2首次盈利</a></h3>
+      <p>Anthropic计划2026年10月上市，目标估值9650亿美元；年化收入达470亿美元，预计二季度首次实现约5.59亿美元营业利润，有望成为AI独角兽上市潮的标杆。</p>
+      <div class="source">来源：Build Fast With AI</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">DeepSeek</span></div>
+      <h3><a href="https://www.cls.cn/detail/2385245" target="_blank">DeepSeek首轮融资近700亿元，国家大基金领投</a></h3>
+      <p>DeepSeek首轮融资接近尾声，国家大基金领投，规模约700亿元人民币（约100亿美元），投前估值450亿美元，国资背景背书凸显国产大模型的战略地位。</p>
+      <div class="source">来源：财联社</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">快手</span></div>
+      <h3><a href="https://www.cls.cn/detail/2385245" target="_blank">可灵AI拟以200亿美元估值分拆Pre-IPO融资约20亿美元</a></h3>
+      <p>快手可灵AI拟以200亿美元估值进行Pre-IPO轮融资约20亿美元，计划明年启动上市；一季度营收超6.5亿元、同比增长超300%，3月ARR近5亿美元。</p>
+      <div class="source">来源：财联社</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 分析师/研报 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>分析师 · 研报</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Morgan Stanley</span></div>
+      <h3><a href="https://www.morganstanley.com/insights/articles/ai-market-trends-institute-2026" target="_blank">摩根士丹利：2028年前全球数据中心建设投入将达2.9万亿美元</a></h3>
+      <p>摩根士丹利预计，2028年前全球数据中心建设投入约2.9万亿美元，其中80%以上尚未发生；今年AI可能贡献美国GDP增长约25%，AI已从主题投资升级为宏观变量。</p>
+      <div class="source">来源：Morgan Stanley</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Morgan Stanley</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">摩根士丹利：AI相关债务2026年将接近翻倍至5700亿美元</a></h3>
+      <p>摩根士丹利预测，2026年全球AI相关债务将接近翻倍至5700亿美元，成为最大投资级债务发行板块，算力军备竞赛正深刻重塑企业资产负债表与信贷市场。</p>
+      <div class="source">来源：Build Fast With AI / Morgan Stanley</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 政策/安全 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>政策 · 安全</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">反垄断</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">42个州总检察长联合调查OpenAI进入传票阶段</a></h3>
+      <p>美国42个州总检察长联盟对OpenAI的调查进入传票阶段，范围涵盖广告声明、ChatGPT迎合性问题、数据处理等，监管压力从联邦向州级扩散。</p>
+      <div class="source">来源：Build Fast With AI</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-eu">欧洲</span><span class="tag tag-cat">AI责任</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">慕尼黑法院裁定谷歌须对AI Overview错误内容承担出版商级责任</a></h3>
+      <p>德国慕尼黑法院裁定，Google AI生成的“权威性回答”需承担出版商级责任，创下欧洲先例，可能改变搜索引擎与AI概览产品的法律责任边界。</p>
+      <div class="source">来源：Build Fast With AI</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">白宫</span></div>
+      <h3><a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" target="_blank">特朗普签署AI行政令：30天内升级国家安全系统网络防御</a></h3>
+      <p>白宫发布《促进先进人工智能创新与安全的行政令》，要求30天内强化国家安全系统网络防御，推动联邦机构与私营部门接入前沿AI模型，坚持“美国优先”的AI与网络安全路线。</p>
+      <div class="source">来源：White House</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">AI安全</span></div>
+      <h3><a href="https://www.tsinghua.edu.cn/info/1182/119822.htm" target="_blank">姚期智院士：AI欺骗引发“生存性”风险，建立大模型评估系统刻不容缓</a></h3>
+      <p>图灵奖得主姚期智院士公开警示，AI系统的欺骗能力可能引发“生存性”风险，呼吁尽快建立大模型评估系统与安全评测标准，引发学界与产业界对AI对齐的再讨论。</p>
+      <div class="source">来源：清华大学</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 中国大厂/AI入口 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>中国大厂 · AI入口</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">字节跳动</span></div>
+      <h3><a href="https://36kr.com/p/3697425974013571" target="_blank">字节豆包月活1.72亿继续领跑，靠“情绪价值”构建留存</a></h3>
+      <p>在春节AI入口战中，字节豆包“守擂成功”，月活达1.72亿，依托可设定性格的“情绪价值”功能提升用户留存，继续领跑国内AI助手市场。</p>
+      <div class="source">来源：36氪</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">阿里巴巴</span></div>
+      <h3><a href="https://36kr.com/p/3697425974013571" target="_blank">阿里千问投入30亿“春节请客计划”，首日DAU暴增727%</a></h3>
+      <p>阿里通义千问投入30亿元补贴开展“春节请客计划”，首日日活暴增727.7%至5848万，超1.3亿人首次体验AI购物，借“吃喝玩乐”闭环撬动下沉用户。</p>
+      <div class="source">来源：36氪</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">腾讯</span></div>
+      <h3><a href="https://36kr.com/p/3697425974013571" target="_blank">腾讯元宝DAU破5000万但快速滑落，默认调用DeepSeek而非混元</a></h3>
+      <p>腾讯元宝投入10亿红包虽一度登顶、日活破5000万，但链接被微信以“诱导分享”屏蔽；更尴尬的是其默认调用DeepSeek模型，而非自研混元大模型。</p>
+      <div class="source">来源：36氪</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">百度</span></div>
+      <h3><a href="https://36kr.com/p/3697425974013571" target="_blank">百度投入5亿押注文心助手，MAU同比增长4倍</a></h3>
+      <p>百度投入5亿元在百度App内推广文心助手，MAU同比增长4倍、生图量增长40倍，并接入OpenClaw；但评测显示其距离合格生产力工具仍有差距。</p>
+      <div class="source">来源：36氪</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 股票/市场 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>股票 · 市场异动</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">A股</span></div>
+      <h3><a href="https://wallstreetcn.com/articles/3774861" target="_blank">6月17日A股科创50大涨超4%，AI硬件与半导体板块爆发</a></h3>
+      <p>6月17日科创50指数大涨超4%，AI硬件/PCB与芯片半导体午后爆发，京东方A、兆易创新、深南电路等多股涨停或创历史新高；催化包括覆铜板涨价、第8.6代AMOLED量产及SK海力士创新高。</p>
+      <div class="source">来源：华尔街见闻</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">半导体</span></div>
+      <h3><a href="https://www.myfindex.com/finance-trends/semiconductor-selloff-nvidia-amd-june-2026" target="_blank">NVIDIA、AMD与英特尔引领半导体抛售，AI涨势暂歇</a></h3>
+      <p>近期美股半导体板块出现获利回吐，NVIDIA、AMD、Intel等芯片龙头领跌，市场对AI资本开支节奏与估值进行再平衡；同期道指、标普屡创新高，呈现科技分化格局。</p>
+      <div class="source">来源：MyFindex</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">企业级采用</span></div>
+      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">三星电子向超12万名员工部署ChatGPT Enterprise和Codex</a></h3>
+      <p>三星电子向超过12万名员工部署ChatGPT Enterprise和Codex，成为OpenAI最大企业客户之一，标志生成式AI正从试点走向大型企业规模化采用。</p>
+      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 其他/产业合作 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>产业合作 · 其他</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">OpenAI</span></div>
+      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">欧莱雅与OpenAI合作，将美宝莲虚拟试妆嵌入ChatGPT</a></h3>
+      <p>欧莱雅与OpenAI达成合作，将美宝莲虚拟试妆工具嵌入ChatGPT，可触达ChatGPT约9亿周活用户，AI应用正加速向消费品牌与电商场景渗透。</p>
+      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Amazon</span></div>
+      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">亚马逊计划对外出售自研AI芯片Trainium，云厂商加速“卖芯片”</a></h3>
+      <p>亚马逊计划对外出售自研AI芯片Trainium，云厂商从“租算力”向“卖芯片”转型，试图在NVIDIA主导的AI芯片市场中开辟差异化路径。</p>
+      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">DeepMind</span></div>
+      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">DeepMind以7500万美元与A24达成研究合作，换取文化信用背书</a></h3>
+      <p>Google DeepMind与独立电影公司A24达成7500万美元研究合作，以获取“文化信用”背书，但未获得内容库访问权，显示AI公司在内容授权与品牌建设上的新策略。</p>
+      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div>AI 行业日报 · 2026-06-24 · 生成于 2026-06-24</div>
+  <div class="disc">仅供研究参考，不构成投资建议。新闻标题均链接至原始来源，点击可跳转查看原文。</div>
+</footer>
 
 </div>
 </body>
