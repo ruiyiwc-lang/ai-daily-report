@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI行业日报 · GitHub Pages</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 50%, #dbeafe 100%);
+  background-attachment: fixed;
+  color: #0f172a;
+  min-height: 100vh;
+  padding: 40px 16px;
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+h1 { font-size: 26px; color: #0c4a6e; margin-bottom: 8px; }
+.sub { color: #475569; margin-bottom: 28px; font-size: 14px; }
+.nav-list { display: grid; gap: 12px; }
+.nav-item {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(186, 230, 253, 0.6);
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+  text-decoration: none; color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.nav-item:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14,165,233,0.12); }
+.nav-item .title { font-weight: 600; color: #0369a1; }
+.nav-item .meta { font-size: 13px; color: #64748b; }
+footer { margin-top: 40px; text-align: center; font-size: 12px; color: #94a3b8; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI 行业日报</h1>
+  <div class="sub">每日更新 · 滚动保留最近 7 期</div>
+  <div id="nav" class="nav-list"></div>
+  <footer>由 QoderWork 自动生成 · 来源为公开网络综合</footer>
+</div>
+<script>
+// ==== NAV_DATA_START ====
+const NAV_DATA = [
+  {slot: 6, date: '2026-06-27', title: 'AI行业日报', weekday: '周六'},
+];
+// ==== NAV_DATA_END ====
+
+const nav = document.getElementById('nav');
+NAV_DATA.forEach(item => {
+  const a = document.createElement('a');
+  a.href = `reports/day-${item.slot}.html`;
+  a.className = 'nav-item';
+  a.innerHTML = `<span class="title">${item.title}</span><span class="meta">${item.date} · ${item.weekday}</span>`;
+  nav.appendChild(a);
+});
+</script>
+</body>
+</html>
