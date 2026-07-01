@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <meta name="theme-color" content="#0ea5e9">
-<title>AI 行业日报 · 2026-06-24</title>
+<title>AI 行业日报 · 2026-07-01</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html { -webkit-text-size-adjust: 100%; }
@@ -98,6 +98,7 @@ section { margin-bottom: 22px; }
 .card h3 a {
   color: #0f172a; text-decoration: none;
   border-bottom: 1px solid transparent; transition: border 0.2s;
+  display: block;
 }
 .card h3 a:hover, .card h3 a:active { border-bottom-color: #0ea5e9; color: #0369a1; }
 .card p {
@@ -148,15 +149,15 @@ footer .disc { color: #94a3b8; margin-top: 6px; }
 <div class="wrap">
 
 <div class="hero">
-  <span class="badge">每日简报 · v2026.06.24</span>
+  <span class="badge">每日简报 · v2026.07.01</span>
   <h1>AI 行业日报</h1>
-  <div class="date">2026年6月24日 周三 · 覆盖6月23日-24日</div>
+  <div class="date">2026年7月1日 周三 · 覆盖6月30日-7月1日</div>
   <ul class="summary">
-    <li><strong>SpaceX连下两城</strong>：以600亿美元收购AI编程工具Cursor/Anysphere，创下风投支持创业公司最大收购案；同日斩获Reflection AI最高63亿美元算力大单。</li>
-    <li><strong>模型层进入“按量付费+开源追赶”新阶段</strong>：Anthropic Fable 5取消订阅改为按量计费；智谱GLM-5.2开源后在Design Arena登顶，价格仅为Fable 5十分之一。</li>
-    <li><strong>Gemini 3.5 Pro正式入市</strong>：Google确认6月23-30日全面上市，200万token上下文窗口，进一步压缩前沿模型领先优势周期。</li>
-    <li><strong>中美资本开支与合规同步升温</strong>：Anthropic完成650亿美元H轮融资估值9650亿美元；42个州总检察长联合调查OpenAI进入传票阶段；慕尼黑法院裁定谷歌须对AI Overview错误负责。</li>
-    <li><strong>算力基建进入重资产军备竞赛</strong>：微软在得州投资300-400亿美元建2吉瓦园区；Anthropic签署超1吉瓦数据中心租约；摩根士丹利预计2028年前全球数据中心建设投入2.9万亿美元。</li>
+    <li><strong>Alphabet 完成 847.5 亿美元股权融资</strong>，创企业 AI 基础设施融资历史纪录，伯克希尔特许以 100 亿美元参与配售。</li>
+    <li><strong>美团发布 LongCat-2.0 万亿参数大模型</strong>，全程基于国产算力训练，测试版调用量进入 OpenRouter 全球前三。</li>
+    <li><strong>美股上半年收官强劲</strong>：纳指累涨 12.79%，费城半导体指数半年翻倍，英伟达、AMD、科磊等芯片股 6 月 30 日大涨。</li>
+    <li><strong>国际清算银行警示 AI 投资热潮</strong>：若资本开支远超可兑现回报，恐演变为长期投资萧条与资产减记。</li>
+    <li><strong>Google DeepMind 半年流失六名核心研究员</strong>，Sergey Brin 内部备忘录称必须“紧急补齐智能体执行差距”。</li>
   </ul>
 </div>
 
@@ -166,59 +167,45 @@ footer .disc { color: #94a3b8; margin-top: 6px; }
   <div class="grid">
 
     <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Google</span></div>
-      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">Gemini 3.5 Pro进入GA窗口期：200万token上下文，Deep Think需Ultra订阅</a></h3>
-      <p>Google确认Gemini 3.5 Pro将于6月23日至30日全面上市，支持200万token上下文窗口；Deep Think模式需250美元/月Ultra订阅，预估输入每百万token 15美元、输出60美元。</p>
-      <div class="source">来源：Build Fast With AI / Google</div>
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">美团</span></div>
+      <h3><a href="https://m.thepaper.cn/newsDetail_forward_33482910" target="_blank">美团发布 LongCat-2.0 大模型，总参数 1.6 万亿且全程由国产算力训练</a></h3>
+      <p>LongCat-2.0 被称为业界首个依靠国产算力完成训练、推理全流程的万亿参数模型，峰值规模超 5 万卡；其测试版在 OpenRouter 总调用量进入全球前三，在 Hermes 月调用量排名全球第一。团队表示将很快开源 Infra 框架、推理引擎及模型参数。</p>
+      <div class="source">来源：澎湃新闻</div>
     </div>
 
     <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Anthropic</span></div>
-      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">Anthropic Fable 5转为按量付费：订阅不再包含，API价为Opus 4.8两倍</a></h3>
-      <p>6月23日起，Fable 5不再包含在订阅中，改为按量计费：输入token每百万10美元、输出token每百万50美元，是Claude Opus 4.8价格的两倍，标志着顶尖模型定价策略向API化倾斜。</p>
-      <div class="source">来源：Build Fast With AI / Anthropic</div>
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">GitHub</span></div>
+      <h3><a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/" target="_blank">GitHub Copilot 全面转向按量计费，部分开发者月账单飙涨 10–50 倍</a></h3>
+      <p>6 月 1 日起 Copilot 所有套餐切换为基于 AI Credits 的用量计费；重度 Agentic 工作流用户账单从数十美元跃升至 750–3000 美元区间。GitHub 称“Copilot 已不再是去年的那款产品”，并推出预算控制与额度池功能。</p>
+      <div class="source">来源：GitHub Blog / Build Fast with AI</div>
     </div>
 
     <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">OpenAI</span></div>
-      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">GPT-5.6预计6月底或7月初发布，Fable 5 SWE-bench Pro达80.3%</a></h3>
-      <p>消息称OpenAI GPT-5.6有望在6月底或7月初亮相；同期Fable 5在SWE-bench Pro编程基准上达到80.3%，Gemini 3.5 Pro与GPT-5.6正形成三足鼎立。</p>
-      <div class="source">来源：Build Fast With AI</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">智谱AI</span></div>
-      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">智谱开源GLM-5.2在Design Arena登顶，价格约为Fable 5十分之一</a></h3>
-      <p>智谱AI开源GLM-5.2模型，在网页设计盲测平台Design Arena中登顶，定价仅约为Fable 5的十分之一，显示国产开源模型在特定垂直场景具备成本与性能双重竞争力。</p>
-      <div class="source">来源：钛媒体 / Edge AI Daily</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-asia">亚洲</span><span class="tag tag-cat">Sakana AI</span></div>
-      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">Sakana AI发布Fugu编排模型，多基准追平Fable与Mythos</a></h3>
-      <p>日本Sakana AI推出Fugu“学习型协调器”，可调度多专家模型协同工作，在多个基准测试中追平Anthropic Fable和Mythos，代表模型编排（orchestration）成为开源追赶的新路径。</p>
-      <div class="source">来源：钛媒体 / Edge AI Daily</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">OpenAI</span></div>
-      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">OpenAI收购Astral，将uv/ruff整合进Codex AI编程代理栈</a></h3>
-      <p>OpenAI收购Astral，获得Python工具uv和ruff，计划整合进Codex AI编程代理栈，进一步夯实其在AI原生开发工具链的布局，开源许可后续影响尚待观察。</p>
-      <div class="source">来源：Build Fast With AI</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">OpenAI</span></div>
-      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">OpenAI推出Daybreak网络安全计划，对标Anthropic Project Glasswing</a></h3>
-      <p>OpenAI发布Daybreak网络安全计划，结合GPT-5.5与Codex Security，直接对标Anthropic 4月推出的Project Glasswing，AI安全能力正成为头部实验室竞争的新战场。</p>
-      <div class="source">来源：Build Fast With AI</div>
+      <div class="meta"><span class="tag tag-asia">亚洲</span><span class="tag tag-cat">OKX</span></div>
+      <h3><a href="https://finance.sina.com.cn/stock/usstock/summary/2026-07-01/doc-iniffytk3156713.shtml" target="_blank">OKX 推出测试版 AI 代理市场，支持代理自主接单、雇佣与链上声誉构建</a></h3>
+      <p>欧易上线 AI Agent Marketplace 测试版，AI 代理可发现任务、相互雇佣并以稳定币结算，同时获得跨场景可用的链上身份。平台将支付、身份与信誉体系整合，目标是让“单人公司依托智能代理劳动力运营”。</p>
+      <div class="source">来源：新浪财经</div>
     </div>
 
     <div class="card">
       <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Google</span></div>
-      <h3><a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank">Google I/O 2026：AI搜索进入代理平台新纪元</a></h3>
-      <p>Google在I/O 2026宣布Search转向AI代理平台，推出Gemini Spark等始终在线的AI Agent能力，Search从“信息检索”向“任务执行”演进。</p>
-      <div class="source">来源：Google Blog</div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-30-2026" target="_blank">Google DeepMind 编程团队转向“中训练”阶段，半年内六名核心研究员离职</a></h3>
+      <p>据 The Information，Google 将 AI 编程打击小组扩展至“中训练”（midtraining）阶段，即在最终指令微调前让部分训练模型接触专门数据，以追赶 Anthropic。过去五个月已有六名研究人员流向 Meta、OpenAI 与 Anthropic。</p>
+      <div class="source">来源：The Information / TechTimes / Build Fast with AI</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Google</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-30-2026" target="_blank">Sergey Brin 内部备忘录：必须紧急补齐智能体执行差距，让模型成为最终代码的主要开发者</a></h3>
+      <p>Google 联合创始人 Sergey Brin 在内部备忘录中将编码能力差距上升为最高级别战略优先级，要求团队“把模型变成最终代码的主要开发者”。这反映出 Google 在 AI 编程与 Agentic 执行领域正面临被 Anthropic 拉开差距的压力。</p>
+      <div class="source">来源：The Information / Build Fast with AI</div>
+    </div>
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">模型竞赛</span></div>
+      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-30-2026" target="_blank">6 月模型发布“空窗”：GPT-5.6 仍受限、Grok 5 继续训练、Gemini 3.5 Pro 延至 7 月</a></h3>
+      <p>市场期待的 6 月密集发布并未兑现：GPT-5.6 仅向约 20 家政府审核合作伙伴开放，Grok 5 仍在训练中，Gemini 3.5 Pro 因 Token 消耗过高与长程 Agentic 表现未达预期推迟至 7 月。模型竞争从“发版速度”进入“能力兑现”阶段。</p>
+      <div class="source">来源：Build Fast with AI / Polymarket / CryptoBriefing</div>
     </div>
 
   </div>
@@ -230,196 +217,53 @@ footer .disc { color: #94a3b8; margin-top: 6px; }
   <div class="grid">
 
     <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">NVIDIA</span></div>
-      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">英伟达发布Halos for Robotics全栈机器人安全系统</a></h3>
-      <p>英伟达推出Halos for Robotics，目标将机器人安全认证周期从4-5年压缩至约2年，进一步将AI芯片优势延伸至物理世界与机器人产业链。</p>
-      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Alphabet</span></div>
+      <h3><a href="https://www.cnbc.com/2026/06/01/alphabet-to-raise-80-billion-from-stock-sales-to-fund-ai-buildout.html" target="_blank">Alphabet 完成 847.5 亿美元股权融资，创企业 AI 基础设施融资纪录</a></h3>
+      <p>Alphabet 将原计划 800 亿美元的融资规模提升至 847.5 亿美元，用于全球计算、数据中心与 AI 能力建设；融资方式包括公开发行、ATM 计划及伯克希尔·哈撒韦 100 亿美元私募配售。这是科技史上最大规模的 AI 基础设施股权融资。</p>
+      <div class="source">来源：CNBC / SEC filings / Google Blog</div>
     </div>
 
     <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">NVIDIA</span></div>
-      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">英伟达Rubin平台采用45°C高温液冷，PUE可降至1.1-1.2</a></h3>
-      <p>Rubin平台实现100%全液冷散热，采用45°C高温液冷方案，数据中心PUE有望降至1.1-1.2，可显著降低AI数据中心的冷却能耗与运营成本。</p>
-      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">数据中心</span></div>
+      <h3><a href="https://finance.sina.com.cn/stock/usstock/summary/2026-06-30/doc-inifexfq1535405.shtml" target="_blank">AI 数据中心热潮推高美国钢铁企业用电成本，2024 年以来最高涨幅达 70%</a></h3>
+      <p>报道称，AI 数据中心建设对美国本土工业用电需求形成挤压，部分钢铁工厂自 2024 年以来用电成本涨幅高达 70%。高能耗制造业的成本结构受到直接冲击，市场对本土工业用电可负担性的担忧升温。</p>
+      <div class="source">来源：新浪财经</div>
     </div>
 
     <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Microsoft</span></div>
-      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">微软在得州投资300-400亿美元建设2吉瓦数据中心园区</a></h3>
-      <p>微软正在得州皮科斯市建设约2吉瓦数据中心园区，总投资约300-400亿美元；同时与雪佛龙签署20年天然气协议，为AI数据中心供电。</p>
-      <div class="source">来源：钛媒体 / Edge AI Daily</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Anthropic</span></div>
-      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">Anthropic签署12个以上美国数据中心租约，总容量超1吉瓦</a></h3>
-      <p>Anthropic与Google合作，在美国签署超过12个数据中心租约，总容量超过1吉瓦；此前还从xAI Colossus租用300兆瓦，月租约12.5亿美元，算力锁定成为竞争壁垒。</p>
-      <div class="source">来源：Build Fast With AI</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">能源监管</span></div>
-      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">FERC向六家电网运营商发说明理由令，加快AI数据中心并网</a></h3>
-      <p>美国联邦能源监管委员会（FERC）6月18日向六家区域电网运营商发出“说明理由令”，要求改革互联框架，加速AI数据中心电力并网，缓解算力扩张的能源瓶颈。</p>
-      <div class="source">来源：Build Fast With AI / FERC</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-asia">亚洲</span><span class="tag tag-cat">联发科</span></div>
-      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">联发科成谷歌TPU关键替代供应商，预计2028年占AI ASIC服务器26%</a></h3>
-      <p>联发科进入谷歌TPU供应链成为关键替代供应商，预计2028年将占全球AI ASIC服务器出货量约26%，ASIC生态多元化正在削弱GPU单一供应格局。</p>
-      <div class="source">来源：钛媒体 / Edge AI Daily</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">国产替代</span></div>
-      <h3><a href="https://enterprisedna.co/resources/news/china-295-billion-ai-data-center-buildout-nvidia-2026/" target="_blank">中国拟推约2万亿元AI基础设施计划，要求80%国产芯片</a></h3>
-      <p>北京正筹备约2万亿元人民币AI数据中心建设计划，目标五年内建成全国性网络，并要求至少80% AI芯片来自国内供应商，将直接冲击NVIDIA、AMD在华份额。</p>
-      <div class="source">来源：Enterprise DNA / Bloomberg</div>
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Amazon</span></div>
+      <h3><a href="https://www.theregister.com/software/2026/04/30/amazons-chips-become-a-20b-business/5221236" target="_blank">亚马逊自研芯片业务年化收入突破 200 亿美元</a></h3>
+      <p>覆盖 Trainium、Graviton 与 Nitro 的亚马逊定制芯片业务年化收入已突破 200 亿美元，并在 OpenAI、Anthropic、Meta、Uber 等客户中获得多年期承诺。定制硅片 diversification 正对传统 GPU 垄断格局形成补充。</p>
+      <div class="source">来源：The Register / Build Fast with AI</div>
     </div>
 
   </div>
 </section>
 
-<!-- 融资/IPO/M&A -->
+<!-- 融资/IPO/并购 -->
 <section>
   <div class="sec-title"><span class="dot"></span>融资 · IPO · 并购</div>
   <div class="grid">
 
     <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">SpaceX</span></div>
-      <h3><a href="https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html" target="_blank">SpaceX以600亿美元收购AI编程工具Cursor/Anysphere</a></h3>
-      <p>SpaceX以全股票交易方式收购Cursor母公司Anysphere，交易价值约600亿美元，创下风投支持创业公司最大收购案；Cursor年化收入约40亿美元，拥有5万多家企业客户。</p>
-      <div class="source">来源：CNBC</div>
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Berkshire</span></div>
+      <h3><a href="https://www.sec.gov/Archives/edgar/data/0001652044/000119312526254490/d110089dfwp.htm" target="_blank">伯克希尔·哈撒韦以 100 亿美元参与 Alphabet 私募配售</a></h3>
+      <p>在 Alphabet 近期市值因核心研究员离职等消息大幅回落后，伯克希尔以 100 亿美元进行私募配售，押注其 AI 基础设施与搜索现金流。该交易被视为巴菲特对 AI 基础设施需求长期性的背书。</p>
+      <div class="source">来源：SEC FWP / CNBC</div>
     </div>
 
     <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">SpaceX</span></div>
-      <h3><a href="https://wap.eastmoney.com/a/202606243780161243.html" target="_blank">SpaceX斩获Reflection AI最高63亿美元算力大单</a></h3>
-      <p>SpaceX与开源AI初创公司Reflection AI达成算力合作协议，合同总价值最高达63亿美元；2026年7月至2029年间，Reflection每月向SpaceX支付1.5亿美元使用Colossus及GB300基础设施。</p>
-      <div class="source">来源：东方财富</div>
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Qualcomm</span></div>
+      <h3><a href="https://www.cnbc.com/2026/06/24/qualcomm-ai-chip-modular-software.html" target="_blank">高通 39.2 亿美元收购 Modular，补齐 AI 模型跨硬件部署能力</a></h3>
+      <p>高通确认收购 AI 推理软件公司 Modular，交易金额约 39.2 亿美元。Modular 的统一部署平台可让模型在 Snapdragon 与 Dragonfly 芯片及 rival 硬件上运行，帮助高通缩小与 NVIDIA CUDA 生态的软件差距。</p>
+      <div class="source">来源：CNBC / Bloomberg</div>
     </div>
 
     <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Anthropic</span></div>
-      <h3><a href="https://www.cls.cn/detail/2385245" target="_blank">Anthropic完成650亿美元H轮融资，估值9650亿美元，存储三巨头参投</a></h3>
-      <p>Anthropic完成65亿美元H轮融资，投后估值9650亿美元，领投方包括Altimeter、Dragoner、Greenoaks、红杉资本；美光、三星电子、SK海力士三大存储巨头参投，年化收入突破470亿美元。</p>
-      <div class="source">来源：财联社</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Anthropic</span></div>
-      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">Anthropic目标10月IPO，估值9650亿美元，预计Q2首次盈利</a></h3>
-      <p>Anthropic计划2026年10月上市，目标估值9650亿美元；年化收入达470亿美元，预计二季度首次实现约5.59亿美元营业利润，有望成为AI独角兽上市潮的标杆。</p>
-      <div class="source">来源：Build Fast With AI</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">DeepSeek</span></div>
-      <h3><a href="https://www.cls.cn/detail/2385245" target="_blank">DeepSeek首轮融资近700亿元，国家大基金领投</a></h3>
-      <p>DeepSeek首轮融资接近尾声，国家大基金领投，规模约700亿元人民币（约100亿美元），投前估值450亿美元，国资背景背书凸显国产大模型的战略地位。</p>
-      <div class="source">来源：财联社</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">快手</span></div>
-      <h3><a href="https://www.cls.cn/detail/2385245" target="_blank">可灵AI拟以200亿美元估值分拆Pre-IPO融资约20亿美元</a></h3>
-      <p>快手可灵AI拟以200亿美元估值进行Pre-IPO轮融资约20亿美元，计划明年启动上市；一季度营收超6.5亿元、同比增长超300%，3月ARR近5亿美元。</p>
-      <div class="source">来源：财联社</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- 分析师/研报 -->
-<section>
-  <div class="sec-title"><span class="dot"></span>分析师 · 研报</div>
-  <div class="grid">
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Morgan Stanley</span></div>
-      <h3><a href="https://www.morganstanley.com/insights/articles/ai-market-trends-institute-2026" target="_blank">摩根士丹利：2028年前全球数据中心建设投入将达2.9万亿美元</a></h3>
-      <p>摩根士丹利预计，2028年前全球数据中心建设投入约2.9万亿美元，其中80%以上尚未发生；今年AI可能贡献美国GDP增长约25%，AI已从主题投资升级为宏观变量。</p>
-      <div class="source">来源：Morgan Stanley</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Morgan Stanley</span></div>
-      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">摩根士丹利：AI相关债务2026年将接近翻倍至5700亿美元</a></h3>
-      <p>摩根士丹利预测，2026年全球AI相关债务将接近翻倍至5700亿美元，成为最大投资级债务发行板块，算力军备竞赛正深刻重塑企业资产负债表与信贷市场。</p>
-      <div class="source">来源：Build Fast With AI / Morgan Stanley</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- 政策/安全 -->
-<section>
-  <div class="sec-title"><span class="dot"></span>政策 · 安全</div>
-  <div class="grid">
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">反垄断</span></div>
-      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">42个州总检察长联合调查OpenAI进入传票阶段</a></h3>
-      <p>美国42个州总检察长联盟对OpenAI的调查进入传票阶段，范围涵盖广告声明、ChatGPT迎合性问题、数据处理等，监管压力从联邦向州级扩散。</p>
-      <div class="source">来源：Build Fast With AI</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-eu">欧洲</span><span class="tag tag-cat">AI责任</span></div>
-      <h3><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank">慕尼黑法院裁定谷歌须对AI Overview错误内容承担出版商级责任</a></h3>
-      <p>德国慕尼黑法院裁定，Google AI生成的“权威性回答”需承担出版商级责任，创下欧洲先例，可能改变搜索引擎与AI概览产品的法律责任边界。</p>
-      <div class="source">来源：Build Fast With AI</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">白宫</span></div>
-      <h3><a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" target="_blank">特朗普签署AI行政令：30天内升级国家安全系统网络防御</a></h3>
-      <p>白宫发布《促进先进人工智能创新与安全的行政令》，要求30天内强化国家安全系统网络防御，推动联邦机构与私营部门接入前沿AI模型，坚持“美国优先”的AI与网络安全路线。</p>
-      <div class="source">来源：White House</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">AI安全</span></div>
-      <h3><a href="https://www.tsinghua.edu.cn/info/1182/119822.htm" target="_blank">姚期智院士：AI欺骗引发“生存性”风险，建立大模型评估系统刻不容缓</a></h3>
-      <p>图灵奖得主姚期智院士公开警示，AI系统的欺骗能力可能引发“生存性”风险，呼吁尽快建立大模型评估系统与安全评测标准，引发学界与产业界对AI对齐的再讨论。</p>
-      <div class="source">来源：清华大学</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- 中国大厂/AI入口 -->
-<section>
-  <div class="sec-title"><span class="dot"></span>中国大厂 · AI入口</div>
-  <div class="grid">
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">字节跳动</span></div>
-      <h3><a href="https://36kr.com/p/3697425974013571" target="_blank">字节豆包月活1.72亿继续领跑，靠“情绪价值”构建留存</a></h3>
-      <p>在春节AI入口战中，字节豆包“守擂成功”，月活达1.72亿，依托可设定性格的“情绪价值”功能提升用户留存，继续领跑国内AI助手市场。</p>
-      <div class="source">来源：36氪</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">阿里巴巴</span></div>
-      <h3><a href="https://36kr.com/p/3697425974013571" target="_blank">阿里千问投入30亿“春节请客计划”，首日DAU暴增727%</a></h3>
-      <p>阿里通义千问投入30亿元补贴开展“春节请客计划”，首日日活暴增727.7%至5848万，超1.3亿人首次体验AI购物，借“吃喝玩乐”闭环撬动下沉用户。</p>
-      <div class="source">来源：36氪</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">腾讯</span></div>
-      <h3><a href="https://36kr.com/p/3697425974013571" target="_blank">腾讯元宝DAU破5000万但快速滑落，默认调用DeepSeek而非混元</a></h3>
-      <p>腾讯元宝投入10亿红包虽一度登顶、日活破5000万，但链接被微信以“诱导分享”屏蔽；更尴尬的是其默认调用DeepSeek模型，而非自研混元大模型。</p>
-      <div class="source">来源：36氪</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">百度</span></div>
-      <h3><a href="https://36kr.com/p/3697425974013571" target="_blank">百度投入5亿押注文心助手，MAU同比增长4倍</a></h3>
-      <p>百度投入5亿元在百度App内推广文心助手，MAU同比增长4倍、生图量增长40倍，并接入OpenClaw；但评测显示其距离合格生产力工具仍有差距。</p>
-      <div class="source">来源：36氪</div>
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">RAISE US</span></div>
+      <h3><a href="https://www.rockefellerfoundation.org/news/raise-us-launches-uniting-nations-leading-employers-and-bipartisan-governors-behind-american-workers/" target="_blank">RAISE US 启动 5 亿美元基金，联合亚马逊、Anthropic、微软再培训美国劳动者</a></h3>
+      <p>RAISE US 由洛克菲勒基金会牵头，亚马逊、Anthropic、微软与 OpenAI Foundation 共同支持，将测试与各州政府合作的再培训与学徒计划，直接对接企业用工需求。商务部长雷蒙多称美国有技术战略，但还缺“人才战略”。</p>
+      <div class="source">来源：Rockefeller Foundation / Axios / The Next Web</div>
     </div>
 
   </div>
@@ -431,61 +275,89 @@ footer .disc { color: #94a3b8; margin-top: 6px; }
   <div class="grid">
 
     <div class="card">
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">美股</span></div>
+      <h3><a href="https://www.cls.cn/detail/2413598" target="_blank">美股 6 月 30 日收盘：三大指数齐升，道指创新高，费城半导体指数半年翻倍</a></h3>
+      <p>6 月 30 日道指涨 0.26% 收于 52319.20 点创新高，标普 500 涨 0.79% 报 7499.36 点，纳指涨 1.52% 报 26213.72 点。二季度标普累涨 14.87%、纳指累涨 21.41%；上半年费城半导体指数累计上涨 101.14%，VanEck 半导体 ETF 涨 82.13%。</p>
+      <div class="source">来源：财联社</div>
+    </div>
+
+    <div class="card">
       <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">A股</span></div>
-      <h3><a href="https://wallstreetcn.com/articles/3774861" target="_blank">6月17日A股科创50大涨超4%，AI硬件与半导体板块爆发</a></h3>
-      <p>6月17日科创50指数大涨超4%，AI硬件/PCB与芯片半导体午后爆发，京东方A、兆易创新、深南电路等多股涨停或创历史新高；催化包括覆铜板涨价、第8.6代AMOLED量产及SK海力士创新高。</p>
+      <h3><a href="https://wallstreetcn.com/articles/3775807" target="_blank">A 股上半年收官：科创 50 暴涨 64% 创新高，算力硬件与芯片半导体全线飙涨</a></h3>
+      <p>6 月 30 日科创 50 单日大涨超 4% 刷新历史新高，创业板指涨 2.99%。上半年半导体设备指数以 162% 累计涨幅居首，CPO、PCB 分别涨近 92% 与 76%；寒武纪涨超 7% 市值突破万亿，成为科创板首只万亿市值个股。</p>
       <div class="source">来源：华尔街见闻</div>
     </div>
 
     <div class="card">
-      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">半导体</span></div>
-      <h3><a href="https://www.myfindex.com/finance-trends/semiconductor-selloff-nvidia-amd-june-2026" target="_blank">NVIDIA、AMD与英特尔引领半导体抛售，AI涨势暂歇</a></h3>
-      <p>近期美股半导体板块出现获利回吐，NVIDIA、AMD、Intel等芯片龙头领跌，市场对AI资本开支节奏与估值进行再平衡；同期道指、标普屡创新高，呈现科技分化格局。</p>
-      <div class="source">来源：MyFindex</div>
+      <div class="meta"><span class="tag tag-cn">中国</span><span class="tag tag-cat">港股</span></div>
+      <h3><a href="https://t.cj.sina.com.cn/articles/view/5182171545/134e1a99902002gacm" target="_blank">港股大模型概念股 6 月 30 日反弹：智谱涨 7.29%，百度涨 5.08%</a></h3>
+      <p>恒生科技指数涨 1.80%，AI 及半导体产业链引领反弹。大模型概念股涨跌互现：智谱涨 7.29% 居首，百度涨 5.08%，腾讯涨 2.28%；MINIMAX 跌 2.89%，明略科技跌 6.32%。</p>
+      <div class="source">来源：新浪财经</div>
+    </div>
+
+  </div>
+  <div class="table-wrap" style="margin-top:14px;">
+    <table>
+      <thead>
+        <tr><th>指数/个股</th><th>收盘价/涨跌</th><th>备注</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>道琼斯指数</td><td class="up">+0.26% 52319.20</td><td>6 月 30 日收盘</td></tr>
+        <tr><td>标普 500</td><td class="up">+0.79% 7499.36</td><td>6 月 30 日收盘</td></tr>
+        <tr><td>纳斯达克综合指数</td><td class="up">+1.52% 26213.72</td><td>6 月 30 日收盘</td></tr>
+        <tr><td>费城半导体指数</td><td class="up">+3.92%</td><td>上半年累涨 101.14%</td></tr>
+        <tr><td>VanEck 半导体 ETF</td><td class="up">+3.78%</td><td>上半年累涨 82.13%</td></tr>
+        <tr><td>英伟达（NVDA）</td><td class="up">+2.63%</td><td>6 月 30 日收盘</td></tr>
+        <tr><td>AMD</td><td class="up">+7.68%</td><td>6 月 30 日收盘</td></tr>
+        <tr><td>科创 50</td><td class="up">+4%+</td><td>6 月 30 日创历史新高</td></tr>
+        <tr><td>创业板指</td><td class="up">+2.99%</td><td>6 月 30 日收盘</td></tr>
+        <tr><td>智谱（02513.HK）</td><td class="up">+7.29%</td><td>6 月 30 日收盘</td></tr>
+        <tr><td>百度集团-SW</td><td class="up">+5.08%</td><td>6 月 30 日收盘</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 分析师/宏观 -->
+<section>
+  <div class="sec-title"><span class="dot"></span>分析师 · 宏观研判</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">BIS</span></div>
+      <h3><a href="https://finance.sina.com.cn/stock/usstock/summary/2026-06-29/doc-inifauhw3807752.shtml" target="_blank">国际清算银行警告：AI 投资热潮恐演变为长期投资萧条</a></h3>
+      <p>BIS 在 6 月 29 日报告中警示，当前 AI 资本支出热潮“可能最终演变为长期投资萧条”，并将这种狂热视为资源过度集中配置催生的泡沫。若企业投入超出可实现回报，资产减记与投资收缩将打击科技板块情绪并拖累整体风险偏好。</p>
+      <div class="source">来源：新浪财经（译自国际清算银行）</div>
     </div>
 
     <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">企业级采用</span></div>
-      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">三星电子向超12万名员工部署ChatGPT Enterprise和Codex</a></h3>
-      <p>三星电子向超过12万名员工部署ChatGPT Enterprise和Codex，成为OpenAI最大企业客户之一，标志生成式AI正从试点走向大型企业规模化采用。</p>
-      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">Anthropic</span></div>
+      <h3><a href="https://www.anthropic.com/research/economic-index-june-2026-report" target="_blank">Anthropic 经济指数：超 35% 用户预计 AI 一年内可承担其大部分工作</a></h3>
+      <p>基于小时级采样的 6 月报告显示，自动化程度更高的 Claude 用户对工作收入、安全感与意义感更为乐观。超过三分之一的用户预计明年 AI 能够完成其大部分或几乎全部工作任务，引发对入门级岗位与劳动力再培训的新一轮讨论。</p>
+      <div class="source">来源：Anthropic Economic Index</div>
     </div>
 
   </div>
 </section>
 
-<!-- 其他/产业合作 -->
+<!-- 政策/安全 -->
 <section>
-  <div class="sec-title"><span class="dot"></span>产业合作 · 其他</div>
+  <div class="sec-title"><span class="dot"></span>政策 · 安全 · 劳动力</div>
   <div class="grid">
 
     <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">OpenAI</span></div>
-      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">欧莱雅与OpenAI合作，将美宝莲虚拟试妆嵌入ChatGPT</a></h3>
-      <p>欧莱雅与OpenAI达成合作，将美宝莲虚拟试妆工具嵌入ChatGPT，可触达ChatGPT约9亿周活用户，AI应用正加速向消费品牌与电商场景渗透。</p>
-      <div class="source">来源：钛媒体 / Edge AI Daily</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">Amazon</span></div>
-      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">亚马逊计划对外出售自研AI芯片Trainium，云厂商加速“卖芯片”</a></h3>
-      <p>亚马逊计划对外出售自研AI芯片Trainium，云厂商从“租算力”向“卖芯片”转型，试图在NVIDIA主导的AI芯片市场中开辟差异化路径。</p>
-      <div class="source">来源：钛媒体 / Edge AI Daily</div>
-    </div>
-
-    <div class="card">
-      <div class="meta"><span class="tag tag-global">全球</span><span class="tag tag-cat">DeepMind</span></div>
-      <h3><a href="https://www.tmtpost.com/8036844.html" target="_blank">DeepMind以7500万美元与A24达成研究合作，换取文化信用背书</a></h3>
-      <p>Google DeepMind与独立电影公司A24达成7500万美元研究合作，以获取“文化信用”背书，但未获得内容库访问权，显示AI公司在内容授权与品牌建设上的新策略。</p>
-      <div class="source">来源：钛媒体 / Edge AI Daily</div>
+      <div class="meta"><span class="tag tag-us">美国</span><span class="tag tag-cat">劳动力</span></div>
+      <h3><a href="https://www.rockefellerfoundation.org/news/raise-us-launches-uniting-nations-leading-employers-and-bipartisan-governors-behind-american-workers/" target="_blank">RAISE US 启动：政企合作 5 亿美元再培训美国劳动者应对 AI 经济</a></h3>
+      <p>该非营利组织由洛克菲勒基金会牵头，亚马逊、Anthropic、微软与 OpenAI Foundation 参与，将按雇主真实用工需求设计州级再培训与学徒计划。此举代表美国 AI 政策从“技术领先”向“人才领先”延伸。</p>
+      <div class="source">来源：Rockefeller Foundation / Axios</div>
     </div>
 
   </div>
 </section>
 
 <footer>
-  <div>AI 行业日报 · 2026-06-24 · 生成于 2026-06-24</div>
-  <div class="disc">仅供研究参考，不构成投资建议。新闻标题均链接至原始来源，点击可跳转查看原文。</div>
+  <div>AI 行业日报 · 2026-07-01 · 生成于 2026-07-01</div>
+  <div class="disc">仅供研究参考，不构成投资建议。数据来源公开网络，点击标题可跳转原始来源页面。</div>
 </footer>
 
 </div>
